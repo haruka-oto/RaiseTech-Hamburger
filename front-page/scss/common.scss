@@ -1,5 +1,6 @@
-@use "foundation/index";
-@use "layout/index";
-@use "object/component/index";
-@use "object/project/index";
-@use "object/utility/index";
+@use "foundation/base";
+@use "foundation/reset";
+@use "layout/header";
+@use "layout/sidebar";
+@use "layout/main";
+@use "layout/footer"
