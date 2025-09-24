@@ -1,5 +1,23 @@
+@charset"UTF-8";
+
+html{
+    font-size: 100%;
+   
+}
+
+
 body {
     font-family: "m-plus-1p",sans-serif;
     font-style: normal;
-    background-color: rgb(112, 112,112)
+    background-color: #FFFDFA;
+    box-sizing:border-box;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
