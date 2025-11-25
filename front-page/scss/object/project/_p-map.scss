@@ -1,0 +1,37 @@
+.p-map {
+    position: relative;
+    width: 80vw;
+    height: auto;
+    opacity: 59.71;
+    z-index: 10;
+}
+
+.p-map-shadow {
+    opacity: 28.55;
+    width: 55vw;
+    height: auto;
+}
+
+.p-map-title {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 60px 100px;
+}
+
+.p-map-text {
+    z-index: 10;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    bottom: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    white-space: normal;
+    width: 60%;
+    padding-left: 100px;
+    padding-top: 120px;
+    overflow: hidden;
+    
+}

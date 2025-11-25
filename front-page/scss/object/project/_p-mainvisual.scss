@@ -1,0 +1,19 @@
+.p-main-visual {
+    background-image: url(/front-page/img/3ba5a44414bb3c0885c27ff614596431.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::before {
+    content: '';
+    display: block;
+    padding-top: 34.12%; /*表示画像の高さ÷表示画像の幅×100*/
+}
+}
+
+
+.p-main-visual__title {
+   position: absolute;
+   top: 40%;
+   margin-left: 30px;
+}

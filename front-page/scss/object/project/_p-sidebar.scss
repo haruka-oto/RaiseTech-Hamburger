@@ -1,0 +1,17 @@
+.p-sidebar-button {
+    padding: 30% 10% 30% 10%;
+}
+
+.p-sidebar-menutitle {
+    padding: 10%;
+}
+
+.p-sidebar-list {
+    padding-left: 20%;
+
+    &__child {
+       margin-top: 10%;
+       margin-bottom: 10%;
+    }
+}
+

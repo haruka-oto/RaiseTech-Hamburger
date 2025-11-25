@@ -1,0 +1,11 @@
+.l-sidebar {
+    width: 20vw;
+    height: auto;
+    background-color:#F2EDE9;
+     @media screen and (max-width:834px) {
+        display: none;
+    
+     }
+
+
+}
