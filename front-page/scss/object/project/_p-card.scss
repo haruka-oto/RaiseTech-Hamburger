@@ -1,18 +1,22 @@
+@charset "UTF-8";
+@use "../../global/breakpoint" as fw;
+
 .p-card {
   display: flex;
   width: auto;
-   @media (max-width:375px) {
-        display: flex;
-        flex-direction: column;
-        margin: 20px;
-        
-      }
+   @include fw.mq("sp") {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .p-card-takeout {
   margin: 6vw 3vw 6vw 6vw;
   background-image: url(/front-page/img/three-burgers-on-brown-wooden-tray-between-white-ceramic-1841108.png);
   background-size: cover;
   background-repeat: no-repeat;
+  @include fw.mq("sp") {
+    margin: 6vw 6vw 3vw 6vw;
+  }
 }
 
 .p-card-eatin {
@@ -20,6 +24,9 @@
   background-image: url(/front-page/img/473d814b175bd517b56eb309f2958725.png);
   background-size: cover;
   background-repeat: no-repeat;
+  @include fw.mq("sp") {
+    margin: 3vw 6vw 6vw 6vw;
+  }
 }
 
 .p-card-title {

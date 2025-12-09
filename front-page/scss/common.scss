@@ -1,14 +1,15 @@
 @use "foundation/base";
 @use "foundation/reset";
+@use "layout/l-wrapper";
 @use "layout/l-header";
 @use "layout/l-sidebar";
-@use "layout/l-main";
 @use "layout/l-footer";
 @use "layout/l-mainbar";
 @use "object/component/c-article";
 @use "object/component/c-list";
 @use "object/component/c-title";
 @use "object/component/c-button";
+@use "object/project/p-header-inner";
 @use "object/project/p-search-box";
 @use "object/project/p-search-button";
 @use "object/project/p-card";
@@ -18,6 +19,9 @@
 @use "object/project/p-logo";
 @use "object/utility/u-font";
 @use "object/utility/u-margin";
+@use "object/utility/u-tab-only";
+@use "global/breakpoint";
+
 
 
 

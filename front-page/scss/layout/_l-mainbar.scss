@@ -1,15 +1,11 @@
-.l-pc-layout {
-    display: flex;
-    justify-content: space-between;
+@charset "UTF-8";
+@use "../global/breakpoint" as fw;
 
-}
+
 
 .l-mainbar {
     width: 80vw;
-    @media screen and (max-width:834px) {
-       width: 100vw;
-    
-     }
-
-
+   @include fw.mq("tab") {
+    width: 100vw;
+  }
 }

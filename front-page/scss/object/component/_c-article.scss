@@ -1,5 +1,7 @@
+@charset "UTF-8";
+@use "../../global/breakpoint" as fw;
+
 .c-article-text {
-font-family: M+ 1p;
 font-weight: 400;
 font-size: 14px;
 line-height: 100%;
@@ -9,10 +11,15 @@ color: rgba(60, 42, 16, 1);
 }
 
 .c-map-text {
-font-family: M+ 1p;
 font-weight: 700;
-font-size: 14px;
-line-height: 33px;
+font-size: 0.8vw;
+line-height: 1.9;
 color: rgba(255, 255, 255, 1);
+@include fw.mq("tab") {
+   font-size: 1.6vw;
+  }
+@include fw.mq("sp") {
+    font-size: 3.74vw;
+  }
 
 }

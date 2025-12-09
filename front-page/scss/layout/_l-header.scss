@@ -1,14 +1,13 @@
 
+@charset "UTF-8";
+@use "../global/breakpoint" as fw;
+
 .l-header {
     width: auto;
     height: 25vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background: rgba(255, 247, 239, 1);
-     @media screen and (max-width:375px ){
-        height: 215px; 
-     }
+    position: relative;
+
    
 }
 

@@ -1,3 +1,6 @@
+@charset "UTF-8";
+@use "../../global/breakpoint" as fw;
+
 .p-seach-button {
     border: 1px solid rgba(112, 112, 112, 1);
     border-radius: 10px;
@@ -6,9 +9,8 @@
     margin-left: 14px;
     margin-right: 20px;
     background: linear-gradient(rgba(242, 237, 233, 1),rgba(222, 216, 211, 1));
-     @media (max-width:375px) {
-        width: 90px;
-        
-      }
 
+    @include fw.mq("tab") {
+    width: 15vw;
+  }
 }

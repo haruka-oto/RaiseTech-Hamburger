@@ -1,0 +1,16 @@
+/*　メディアクエリ設定　*/
+@use "sass:map";
+
+$breakpoints: (
+    "sp": "screen and (max-width:375px)",
+    "tab": "screen and (max-width:834px)",
+    "pc": "screen and (min-width:835px)",
+
+);
+
+@mixin mq($breakpoint:pc) {
+    @media #{map.get($breakpoints,$breakpoint)}{
+        @content
+    }
+
+}

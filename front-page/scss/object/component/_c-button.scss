@@ -2,7 +2,7 @@
 font-family: Roboto;
 font-weight: 700;
 font-style: Bold;
-font-size: 34px;
+font-size: clamp(20px,4vw ,34px);
 line-height: 100%;
 letter-spacing: 0%;
 color: rgba(112, 112, 112, 1);

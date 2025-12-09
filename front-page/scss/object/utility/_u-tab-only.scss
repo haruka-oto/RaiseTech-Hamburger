@@ -1,0 +1,13 @@
+@charset "UTF-8";
+@use "../../global/breakpoint" as fw;
+
+.u-tab-only {
+    display: none;
+    position: absolute;
+     @include fw.mq("tab") {
+        display: inline-block;
+        top: 10px;
+        right: 10px;
+    
+  }
+}

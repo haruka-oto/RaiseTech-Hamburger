@@ -1,9 +1,17 @@
+@charset "UTF-8";
+@use "../../global/breakpoint" as fw;
+
 .p-seach-box {
     border: 1px solid #707070;
     border-radius: 10px;
     height: 30px;
     width: 20vw;
     background-color: rgba(255, 255, 255, 1);
+    
+    
+@include fw.mq("tab") {
+    width: 50vw;
+  }
 }
 
 .p-seach-box button {

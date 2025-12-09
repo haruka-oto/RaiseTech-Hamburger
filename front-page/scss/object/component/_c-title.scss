@@ -1,7 +1,10 @@
+@charset "UTF-8";
+@use "../../global/breakpoint" as fw;
+
 .c-card-title {
 font-family: Roboto;
 font-weight: 700;
-font-size: 60px;
+font-size: clamp(41px,5.2vw,80px);
 line-height: 100%;
 color: rgba(234, 234, 234, 1);
 position: relative;
@@ -10,7 +13,7 @@ position: relative;
    
     content: "";
     position: absolute;
-    width: 50px;
+    width: clamp(33.89px,3.2vw,63px);
     height: 2px;
     background-color: rgba(255, 255, 255, 1);
     bottom: -40px;
@@ -39,7 +42,7 @@ color: rgba(255, 255, 255, 1);
 .c-map-title {
 font-family: M+ 1p;
 font-weight: 700;
-font-size: 36px;
+font-size: clamp(30px,1.9vw,37px);
 line-height: 100%;
 color: rgba(255, 255, 255, 1);
 position: relative;
@@ -48,11 +51,15 @@ position: relative;
    
     content: "";
     position: absolute;
-    width: 50px;
+    width: 3.2vw;
     height: 2px;
     background-color: rgba(255, 255, 255, 1);
-    bottom: 30px;
-    left: 100px;
+    bottom:-30px;
+    left: 0;
+    @include fw.mq("tab") {
+    width: 8.9vw;
+  }
+
 }
 
 }

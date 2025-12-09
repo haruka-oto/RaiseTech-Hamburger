@@ -20,18 +20,17 @@ a {
   display: block;
 }
 
+.l-pc-layout {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*　メディアクエリ設定　*/
 .l-header {
   width: auto;
   height: 25vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: rgb(255, 247, 239);
-}
-@media screen and (max-width: 375px) {
-  .l-header {
-    height: 215px;
-  }
+  position: relative;
 }
 
 .l-seach-area {
@@ -51,19 +50,6 @@ a {
   }
 }
 
-.l-main {
-  width: 80vw;
-}
-@media screen and (max-width: 834px) {
-  .l-main {
-    width: 100vw;
-  }
-}
-
-.l-map {
-  background-image: url(/front-page/img/スクリーンショット\ 2020-02-10\ 11.47.42.png);
-}
-
 .l-footer {
   width: 100%;
   height: 149px;
@@ -74,28 +60,17 @@ a {
   justify-content: center;
   flex-direction: column;
 }
-@media screen and (max-width: 834px) {
-  .l-footer {
-    height: 150px;
-  }
-}
-
-.l-pc-layout {
-  display: flex;
-  justify-content: space-between;
-}
 
 .l-mainbar {
   width: 80vw;
 }
-@media screen and (max-width: 834px) {
+@media screen and (max-width:834px) {
   .l-mainbar {
     width: 100vw;
   }
 }
 
 .c-article-text {
-  font-family: M1p;
   font-weight: 400;
   font-size: 14px;
   line-height: 100%;
@@ -104,17 +79,26 @@ a {
 }
 
 .c-map-text {
-  font-family: M1p;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 33px;
+  font-size: 0.8vw;
+  line-height: 1.9;
   color: rgb(255, 255, 255);
+}
+@media screen and (max-width:834px) {
+  .c-map-text {
+    font-size: 1.6vw;
+  }
+}
+@media screen and (max-width:375px) {
+  .c-map-text {
+    font-size: 3.74vw;
+  }
 }
 
 .c-menu-list {
   font-family: M1p;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.4vw;
   line-height: 100%;
   color: rgb(112, 112, 112);
 }
@@ -122,7 +106,7 @@ a {
 .c-menu-list__child {
   font-family: M1p;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.2vw;
   line-height: 100%;
   color: rgb(112, 112, 112);
 }
@@ -130,7 +114,7 @@ a {
 .c-card-title {
   font-family: Roboto;
   font-weight: 700;
-  font-size: 60px;
+  font-size: clamp(41px, 5.2vw, 80px);
   line-height: 100%;
   color: rgb(234, 234, 234);
   position: relative;
@@ -138,7 +122,7 @@ a {
 .c-card-title::before {
   content: "";
   position: absolute;
-  width: 50px;
+  width: clamp(33.89px, 3.2vw, 63px);
   height: 2px;
   background-color: rgb(255, 255, 255);
   bottom: -40px;
@@ -164,7 +148,7 @@ a {
 .c-map-title {
   font-family: M1p;
   font-weight: 700;
-  font-size: 36px;
+  font-size: clamp(30px, 1.9vw, 37px);
   line-height: 100%;
   color: rgb(255, 255, 255);
   position: relative;
@@ -172,21 +156,39 @@ a {
 .c-map-title::before {
   content: "";
   position: absolute;
-  width: 50px;
+  width: 3.2vw;
   height: 2px;
   background-color: rgb(255, 255, 255);
-  bottom: 30px;
-  left: 100px;
+  bottom: -30px;
+  left: 0;
+}
+@media screen and (max-width:834px) {
+  .c-map-title::before {
+    width: 8.9vw;
+  }
 }
 
 .c-menu-button {
   font-family: Roboto;
   font-weight: 700;
   font-style: Bold;
-  font-size: 34px;
+  font-size: clamp(20px, 4vw, 34px);
   line-height: 100%;
   letter-spacing: 0%;
   color: rgb(112, 112, 112);
+}
+
+.p-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+@media screen and (max-width:834px) {
+  .p-header-inner {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .p-seach-box {
@@ -195,6 +197,11 @@ a {
   height: 30px;
   width: 20vw;
   background-color: rgb(255, 255, 255);
+}
+@media screen and (max-width:834px) {
+  .p-seach-box {
+    width: 50vw;
+  }
 }
 
 .p-seach-box button {
@@ -225,9 +232,9 @@ a {
   margin-right: 20px;
   background: linear-gradient(rgb(242, 237, 233), rgb(222, 216, 211));
 }
-@media (max-width: 375px) {
+@media screen and (max-width:834px) {
   .p-seach-button {
-    width: 90px;
+    width: 15vw;
   }
 }
 
@@ -235,11 +242,10 @@ a {
   display: flex;
   width: auto;
 }
-@media (max-width: 375px) {
+@media screen and (max-width:375px) {
   .p-card {
-    display: flex;
     flex-direction: column;
-    margin: 20px;
+    justify-content: center;
   }
 }
 
@@ -249,12 +255,22 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media screen and (max-width:375px) {
+  .p-card-takeout {
+    margin: 6vw 6vw 3vw 6vw;
+  }
+}
 
 .p-card-eatin {
   margin: 6vw 6vw 6vw 3vw;
   background-image: url(/front-page/img/473d814b175bd517b56eb309f2958725.png);
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media screen and (max-width:375px) {
+  .p-card-eatin {
+    margin: 3vw 6vw 6vw 6vw;
+  }
 }
 
 .p-card-title {
@@ -292,40 +308,73 @@ a {
 }
 
 .p-map {
+  background-image: url(/front-page/img/スクリーンショット\ 2020-02-10\ 11.47.42.png);
   position: relative;
-  width: 80vw;
+  width: 100%;
   height: auto;
-  opacity: 59.71;
   z-index: 10;
+  overflow: hidden;
+}
+@media screen and (max-width:375px) {
+  .p-map {
+    height: 691px;
+  }
 }
 
 .p-map-shadow {
-  opacity: 28.55;
   width: 55vw;
-  height: auto;
+  height: 100%;
+}
+@media screen and (max-width:834px) {
+  .p-map-shadow {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width:375px) {
+  .p-map-shadow {
+    margin: 0;
+    height: 50%;
+  }
+}
+
+.p-map-shadow__big {
+  opacity: 30%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .p-map-title {
   z-index: 10;
   position: absolute;
-  top: 0;
-  left: 0;
-  padding: 60px 100px;
+  top: 70px;
+  left: 100px;
+}
+@media screen and (max-width:834px) {
+  .p-map-title {
+    left: 50px;
+  }
 }
 
 .p-map-text {
   z-index: 10;
   position: absolute;
-  top: 40px;
-  left: 0;
-  bottom: 0;
-  font-size: 16px;
-  line-height: 1.7;
-  white-space: normal;
-  width: 60%;
-  padding-left: 100px;
-  padding-top: 120px;
-  overflow: hidden;
+  top: 150px;
+  left: 100px;
+  width: 50%;
+}
+@media screen and (max-width:834px) {
+  .p-map-text {
+    width: 100%;
+    top: 140px;
+    left: 50px;
+    width: 80%;
+  }
 }
 
 .p-sidebar-button {
@@ -346,8 +395,14 @@ a {
 
 .p-logo {
   width: 20vw;
-  height: 30%;
+  height: auto;
   margin-left: 30px;
+}
+@media screen and (max-width:834px) {
+  .p-logo {
+    margin-left: 0;
+    width: clamp(203px, 28.7vw, 240vw);
+  }
 }
 
 .u-font {
@@ -356,4 +411,16 @@ a {
 
 .u-margin-article {
   margin-top: 80%;
+}
+
+.u-tab-only {
+  display: none;
+  position: absolute;
+}
+@media screen and (max-width:834px) {
+  .u-tab-only {
+    display: inline-block;
+    top: 10px;
+    right: 10px;
+  }
 }/*# sourceMappingURL=common.css.map */

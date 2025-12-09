@@ -1,5 +1,12 @@
+@charset "UTF-8";
+@use "../../global/breakpoint" as fw;
+
 .p-logo {
  width: 20vw;
- height: 30%;
+ height: auto;
  margin-left: 30px;
+  @include fw.mq("tab") {
+    margin-left: 0 ;
+    width: clamp(203px,28.7vw,240vw);
+  }
 }
