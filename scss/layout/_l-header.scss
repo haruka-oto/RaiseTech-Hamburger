@@ -1,11 +1,10 @@
-
 @charset "UTF-8";
 @use "../global/breakpoint" as fw;
 
 .l-header {
     width: auto;
     height: 25vh;
-    background: rgba(255, 247, 239, 1);
+    background: rgb(255, 247, 239);
     position: relative;
 
    

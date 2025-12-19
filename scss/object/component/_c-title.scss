@@ -6,7 +6,7 @@ font-family: Roboto;
 font-weight: 700;
 font-size: clamp(41px,5.2vw,80px);
 line-height: 100%;
-color: rgba(234, 234, 234, 1);
+color: rgb(234, 234, 234);
 position: relative;
 
  &::before{
@@ -15,7 +15,7 @@ position: relative;
     position: absolute;
     width: clamp(33.89px,3.2vw,63px);
     height: 2px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 255, 255);
     bottom: -40px;
     left: 10px;
 }
@@ -28,7 +28,7 @@ font-family: M+ 1p;
 font-weight: 700;
 font-size: 20px;
 line-height: 24px;
-color: rgba(60, 42, 16, 1);
+color: rgb(60, 42, 16);
 }
 
 .c-main-visual-title {
@@ -36,7 +36,7 @@ color: rgba(60, 42, 16, 1);
 font-weight: 700;
 line-height: 100%;
 font-size: 20px;
-color: rgba(255, 255, 255, 1);
+color: rgb(255, 255, 255);
 }
 
 .c-map-title {
@@ -44,7 +44,7 @@ font-family: M+ 1p;
 font-weight: 700;
 font-size: clamp(30px,1.9vw,37px);
 line-height: 100%;
-color: rgba(255, 255, 255, 1);
+color: rgb(255, 255, 255);
 position: relative;
 
  &::before{
@@ -53,7 +53,7 @@ position: relative;
     position: absolute;
     width: 3.2vw;
     height: 2px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 255, 255);
     bottom:-30px;
     left: 0;
     @include fw.mq("tab") {
