@@ -1,4 +1,5 @@
 @use "foundation/base";
+@use "foundation/breakpoint";
 @use "layout/l-wrapper";
 @use "layout/l-header";
 @use "layout/l-sidebar";
@@ -19,7 +20,7 @@
 @use "object/utility/u-color--white";
 @use "object/utility/u-margin";
 @use "object/utility/u-tab-only";
-@use "global/breakpoint";
+
 
 
 

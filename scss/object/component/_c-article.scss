@@ -1,12 +1,13 @@
 @charset "UTF-8";
-@use "../../global/breakpoint" as fw;
+@use "../../foundation/breakpoint" as fw;
 
 .c-article-text {
 font-weight: 400;
-font-size: 14px;
-line-height: 100%;
-letter-spacing: 0%;
+font-size: 0.83vw;
 color: rgb(60, 42, 16);
+ @include fw.mq("sp") {
+    font-size: 4.26vw;
+  }
 
 }
 

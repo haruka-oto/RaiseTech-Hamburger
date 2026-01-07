@@ -16,12 +16,18 @@ a {
   display: block;
 }
 
+img {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+/*　メディアクエリ設定　*/
 .l-pc-layout {
   display: flex;
   justify-content: space-between;
 }
 
-/*　メディアクエリ設定　*/
 .l-header {
   width: auto;
   height: 25vh;
@@ -33,6 +39,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 35%;
 }
 
 .l-sidebar {
@@ -68,10 +75,13 @@ a {
 
 .c-article-text {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 100%;
-  letter-spacing: 0%;
+  font-size: 0.83vw;
   color: rgb(60, 42, 16);
+}
+@media screen and (max-width:430px) {
+  .c-article-text {
+    font-size: 4.26vw;
+  }
 }
 
 .c-map-text {
@@ -85,7 +95,7 @@ a {
     font-size: 1.6vw;
   }
 }
-@media screen and (max-width:375px) {
+@media screen and (max-width:430px) {
   .c-map-text {
     font-size: 3.74vw;
   }
@@ -110,7 +120,7 @@ a {
 .c-card-title {
   font-family: Roboto;
   font-weight: 700;
-  font-size: clamp(41px, 5.2vw, 80px);
+  font-size: clamp(35px, 5.2vw, 80px);
   line-height: 100%;
   color: rgb(234, 234, 234);
   position: relative;
@@ -128,9 +138,14 @@ a {
 .c-article-title {
   font-family: M1p;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.24vw;
   line-height: 24px;
   color: rgb(60, 42, 16);
+}
+@media screen and (max-width:430px) {
+  .c-article-title {
+    font-size: 5.86vw;
+  }
 }
 
 .c-main-visual-title {
@@ -190,9 +205,9 @@ a {
 .p-seach-box {
   border: 1px solid #707070;
   border-radius: 10px;
-  height: 30px;
-  width: 20vw;
+  width: 100%;
   background-color: rgb(255, 255, 255);
+  height: 30px;
 }
 @media screen and (max-width:834px) {
   .p-seach-box {
@@ -214,7 +229,7 @@ a {
 .p-seach-box button::before {
   width: 24px;
   height: 24px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z' fill='%23777777'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url(../../../img/serchbox-logo.png);
   background-repeat: no-repeat;
   content: "";
 }
@@ -222,7 +237,10 @@ a {
 .p-seach-button {
   border: 1px solid rgb(112, 112, 112);
   border-radius: 10px;
-  width: 8vw;
+  color: rgb(112, 112, 112);
+  font-weight: 700;
+  font-size: 16px;
+  width: 30%;
   height: 30px;
   margin-left: 14px;
   margin-right: 20px;
@@ -230,7 +248,7 @@ a {
 }
 @media screen and (max-width:834px) {
   .p-seach-button {
-    width: 15vw;
+    width: 30%;
   }
 }
 
@@ -238,7 +256,7 @@ a {
   display: flex;
   width: auto;
 }
-@media screen and (max-width:375px) {
+@media screen and (max-width:430px) {
   .p-card {
     flex-direction: column;
     justify-content: center;
@@ -250,8 +268,9 @@ a {
   background-image: url(../../../img/card-takeout.png);
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
-@media screen and (max-width:375px) {
+@media screen and (max-width:430px) {
   .p-card-takeout {
     margin: 6vw 6vw 3vw 6vw;
   }
@@ -262,8 +281,9 @@ a {
   background-image: url(../../../img/card-eatin.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
-@media screen and (max-width:375px) {
+@media screen and (max-width:430px) {
   .p-card-eatin {
     margin: 3vw 6vw 6vw 6vw;
   }
@@ -273,16 +293,15 @@ a {
   margin: 20px 15px;
 }
 
-.p-article-title {
-  padding: 3%;
-  padding-left: 0;
-}
-
 .p-article {
   background: rgb(255, 255, 255);
   opacity: 0.8;
   margin: 3%;
   padding: 0 3% 3% 3%;
+}
+
+.p-article-title {
+  padding-top: 5px;
 }
 
 .p-main-visual {
@@ -305,13 +324,14 @@ a {
 
 .p-map {
   background-image: url(../../../img/map.png);
-  position: relative;
+  background-size: cover;
   width: 100%;
   height: auto;
-  z-index: 10;
+  z-index: 0;
   overflow: hidden;
+  position: relative;
 }
-@media screen and (max-width:375px) {
+@media screen and (max-width:430px) {
   .p-map {
     height: 691px;
   }
@@ -320,6 +340,7 @@ a {
 .p-map-shadow {
   width: 55vw;
   height: 100%;
+  z-index: 100;
 }
 @media screen and (max-width:834px) {
   .p-map-shadow {
@@ -328,7 +349,7 @@ a {
     margin-left: 20px;
   }
 }
-@media screen and (max-width:375px) {
+@media screen and (max-width:430px) {
   .p-map-shadow {
     margin: 0;
     height: 50%;
@@ -336,17 +357,17 @@ a {
 }
 
 .p-map-shadow__big {
-  opacity: 30%;
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
+  opacity: 30%;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
 }
 
 .p-map-title {
-  z-index: 10;
+  z-index: 1000;
   position: absolute;
   top: 70px;
   left: 100px;
@@ -358,7 +379,7 @@ a {
 }
 
 .p-map-text {
-  z-index: 10;
+  z-index: 1000;
   position: absolute;
   top: 150px;
   left: 100px;
@@ -367,6 +388,7 @@ a {
 @media screen and (max-width:834px) {
   .p-map-text {
     width: 100%;
+    height: 100%;
     top: 140px;
     left: 50px;
     width: 80%;
@@ -406,7 +428,7 @@ a {
 }
 
 .u-margin-article {
-  margin-top: 80%;
+  margin-top: 300px;
 }
 
 .u-tab-only {

@@ -1,13 +1,14 @@
 @charset "UTF-8";
-@use "../../global/breakpoint" as fw;
+@use "../../foundation/breakpoint" as fw;
 
 .p-map {
     background-image: url(../../../img/map.png);
-    position: relative;
+    background-size: cover;
     width: 100%;
     height: auto;
-    z-index: 10;
+    z-index: 0;
     overflow: hidden;
+    position: relative;
      @include fw.mq("sp") {
    height: 691px;
 }
@@ -16,6 +17,7 @@
 .p-map-shadow {
     width: 55vw;
     height: 100%;
+    z-index: 100;
     @include fw.mq("tab") {
     width: 100%;
     margin-top: 20px;
@@ -29,17 +31,17 @@
 }
 
 .p-map-shadow__big {
+   position: absolute;
+   top: 0;
+   left: 0;
     opacity: 30%;
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
+    z-index: 1000;
 }
 
 .p-map-title {
-    z-index: 10;
+    z-index: 1000;
     position: absolute;
     top: 70px;
     left: 100px;
@@ -47,9 +49,9 @@
    left: 50px;
 }
 }
-   
+
 .p-map-text {
-    z-index: 10;
+  z-index: 1000;
     position: absolute;
     top: 150px;
     left: 100px;
@@ -57,6 +59,7 @@
 
     @include fw.mq("tab") {
     width: 100%;
+    height: 100%;
     top: 140px;
     left: 50px;
     width: 80%;
