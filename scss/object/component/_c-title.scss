@@ -47,7 +47,7 @@ font-family: M+ 1p;
 font-weight: 700;
 font-size: clamp(30px,1.9vw,37px);
 line-height: 100%;
-color: rgb(255, 255, 255);
+color:white;
 position: relative;
 
  &::before{
@@ -56,9 +56,9 @@ position: relative;
     position: absolute;
     width: 3.2vw;
     height: 2px;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     bottom:-30px;
-    left: 0;
+    left: 80px;
     @include fw.mq("tab") {
     width: 8.9vw;
   }

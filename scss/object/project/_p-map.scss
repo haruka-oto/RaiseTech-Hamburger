@@ -1,27 +1,40 @@
 @charset "UTF-8";
 @use "../../foundation/breakpoint" as fw;
 
+
 .p-map {
-    background-image: url(../../../img/map.png);
-    background-size: cover;
-    width: 100%;
+   display: flex;
+   align-items: stretch;
+   flex-direction: column;
     height: auto;
-    z-index: 0;
-    overflow: hidden;
-    position: relative;
-     @include fw.mq("sp") {
-   height: 691px;
-}
 }
 
+.p-map-text-area {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.p-map-image {
+  background-image: url(../../../img/map.jpeg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -99;
+}
 .p-map-shadow {
     width: 55vw;
     height: 100%;
-    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
     @include fw.mq("tab") {
     width: 100%;
-    margin-top: 20px;
-    margin-left: 20px;
     
   }
    @include fw.mq("sp") {
@@ -37,30 +50,25 @@
     opacity: 30%;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: -9;
 }
 
+
 .p-map-title {
-    z-index: 1000;
-    position: absolute;
-    top: 70px;
-    left: 100px;
-    @include fw.mq("tab") {
-   left: 50px;
-}
+  padding-top: 80px;
+  padding-left: 80px;
 }
 
 .p-map-text {
-  z-index: 1000;
-    position: absolute;
-    top: 150px;
-    left: 100px;
     width: 50%;
+    padding-top: 80px;
+    padding-left: 80px;
+    padding-bottom: 30px;
 
     @include fw.mq("tab") {
     width: 100%;
     height: 100%;
-    top: 140px;
+    top: 150px;
     left: 50px;
     width: 80%;
   }

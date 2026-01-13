@@ -88,7 +88,7 @@ img {
   font-weight: 700;
   font-size: 0.8vw;
   line-height: 1.9;
-  color: rgb(255, 255, 255);
+  color: white;
 }
 @media screen and (max-width:834px) {
   .c-map-text {
@@ -161,7 +161,7 @@ img {
   font-weight: 700;
   font-size: clamp(30px, 1.9vw, 37px);
   line-height: 100%;
-  color: rgb(255, 255, 255);
+  color: white;
   position: relative;
 }
 .c-map-title::before {
@@ -169,9 +169,9 @@ img {
   position: absolute;
   width: 3.2vw;
   height: 2px;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   bottom: -30px;
-  left: 0;
+  left: 80px;
 }
 @media screen and (max-width:834px) {
   .c-map-title::before {
@@ -323,30 +323,41 @@ img {
 }
 
 .p-map {
-  background-image: url(../../../img/map.png);
-  background-size: cover;
-  width: 100%;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
   height: auto;
-  z-index: 0;
-  overflow: hidden;
+}
+
+.p-map-text-area {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   position: relative;
 }
-@media screen and (max-width:430px) {
-  .p-map {
-    height: 691px;
-  }
+
+.p-map-image {
+  background-image: url(../../../img/map.jpeg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -99;
 }
 
 .p-map-shadow {
   width: 55vw;
   height: 100%;
-  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -99;
 }
 @media screen and (max-width:834px) {
   .p-map-shadow {
     width: 100%;
-    margin-top: 20px;
-    margin-left: 20px;
   }
 }
 @media screen and (max-width:430px) {
@@ -363,33 +374,25 @@ img {
   opacity: 30%;
   width: 100%;
   height: 100%;
-  z-index: 1000;
+  z-index: -9;
 }
 
 .p-map-title {
-  z-index: 1000;
-  position: absolute;
-  top: 70px;
-  left: 100px;
-}
-@media screen and (max-width:834px) {
-  .p-map-title {
-    left: 50px;
-  }
+  padding-top: 80px;
+  padding-left: 80px;
 }
 
 .p-map-text {
-  z-index: 1000;
-  position: absolute;
-  top: 150px;
-  left: 100px;
   width: 50%;
+  padding-top: 80px;
+  padding-left: 80px;
+  padding-bottom: 30px;
 }
 @media screen and (max-width:834px) {
   .p-map-text {
     width: 100%;
     height: 100%;
-    top: 140px;
+    top: 150px;
     left: 50px;
     width: 80%;
   }
