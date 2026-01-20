@@ -6,7 +6,7 @@
     border-radius: 10px;
     color:rgb(112, 112, 112);
     font-weight: 700;
-    font-size: 16px;
+    font-size: clamp(16px,0.83vw,20px);
     width: 30%;
     height: 30px;
     margin-left: 14px;
@@ -15,6 +15,6 @@
 
 
     @include fw.mq("tab") {
-    width: 30%;
+    width: 16.3vw;
   }
 }

@@ -1,17 +1,18 @@
 @charset "UTF-8";
 @use "../../foundation/breakpoint" as fw;
 
-.p-main-visual {
-    background-image: url(../../../img/mainvisual.png);
-    background-size:contain;
-    background-repeat: no-repeat;
+.p-main-visual__img {
     position: relative;
+    background-image: url(../../../img/mainvisual.png);
+    background-size: cover;
+    aspect-ratio: 3/1;
+    width: 100%;
+    height: auto;
+    @include fw.mq("sp") {
+    aspect-ratio: 1.3/1;
+    background-image: url(../../../img/mainvisual-sp.png);
+  }
 
-    &::before {
-    content: '';
-    display: block;
-    padding-top: 34.12%; /*表示画像の高さ÷表示画像の幅×100*/
-}
 }
 
 .p-main-visual__title {

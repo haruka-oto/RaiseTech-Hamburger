@@ -41,6 +41,12 @@ img {
   justify-content: space-between;
   width: 35%;
 }
+@media screen and (max-width:834px) {
+  .l-seach-area {
+    margin-top: 30px;
+    width: auto;
+  }
+}
 
 .l-sidebar {
   width: 20vw;
@@ -208,10 +214,12 @@ img {
   width: 100%;
   background-color: rgb(255, 255, 255);
   height: 30px;
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width:834px) {
   .p-seach-box {
-    width: 50vw;
+    width: 47.4vw;
   }
 }
 
@@ -219,16 +227,19 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border: none;
   background-color: transparent;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .p-seach-box button::before {
-  width: 24px;
-  height: 24px;
+  aspect-ratio: 1/1;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
   background-image: url(../../../img/serchbox-logo.png);
   background-repeat: no-repeat;
   content: "";
@@ -239,7 +250,7 @@ img {
   border-radius: 10px;
   color: rgb(112, 112, 112);
   font-weight: 700;
-  font-size: 16px;
+  font-size: clamp(16px, 0.83vw, 20px);
   width: 30%;
   height: 30px;
   margin-left: 14px;
@@ -248,7 +259,7 @@ img {
 }
 @media screen and (max-width:834px) {
   .p-seach-button {
-    width: 30%;
+    width: 16.3vw;
   }
 }
 
@@ -264,33 +275,40 @@ img {
 }
 
 .p-card-takeout {
-  margin: 6vw 3vw 6vw 6vw;
+  margin: 6vw 2.5% 6vw 5%;
+  box-sizing: border-box;
   background-image: url(../../../img/card-takeout.png);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (max-width:430px) {
   .p-card-takeout {
-    margin: 6vw 6vw 3vw 6vw;
+    margin: 5%;
+    margin-bottom: 0;
+    width: 90%;
   }
 }
 
 .p-card-eatin {
-  margin: 6vw 6vw 6vw 3vw;
+  margin: 6vw 5% 6vw 2.5%;
+  box-sizing: border-box;
   background-image: url(../../../img/card-eatin.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (max-width:430px) {
   .p-card-eatin {
-    margin: 3vw 6vw 6vw 6vw;
+    width: 90%;
+    margin: 5%;
   }
-}
-
-.p-card-title {
-  margin: 20px 15px;
 }
 
 .p-article {
@@ -298,22 +316,30 @@ img {
   opacity: 0.8;
   margin: 3%;
   padding: 0 3% 3% 3%;
+  height: 100%;
+}
+
+.p-card-title {
+  margin: 20px 15px;
 }
 
 .p-article-title {
   padding-top: 5px;
 }
 
-.p-main-visual {
-  background-image: url(../../../img/mainvisual.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+.p-main-visual__img {
   position: relative;
+  background-image: url(../../../img/mainvisual.png);
+  background-size: cover;
+  aspect-ratio: 3/1;
+  width: 100%;
+  height: auto;
 }
-.p-main-visual::before {
-  content: "";
-  display: block;
-  padding-top: 34.12%; /*表示画像の高さ÷表示画像の幅×100*/
+@media screen and (max-width:430px) {
+  .p-main-visual__img {
+    aspect-ratio: 1.3/1;
+    background-image: url(../../../img/mainvisual-sp.png);
+  }
 }
 
 .p-main-visual__title {
@@ -431,7 +457,7 @@ img {
 }
 
 .u-margin-article {
-  margin-top: 300px;
+  margin-top: 60%;
 }
 
 .u-tab-only {

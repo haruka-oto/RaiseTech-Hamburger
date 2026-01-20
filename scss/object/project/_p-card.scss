@@ -10,29 +10,39 @@
   }
 }
 .p-card-takeout {
-  margin: 6vw 3vw 6vw 6vw;
+  margin: 6vw 2.5% 6vw 5% ;
+  box-sizing: border-box;
   background-image: url(../../../img/card-takeout.png);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  width: 50%;
+  display:flex;
+  flex-direction: column;
+
+  
   @include fw.mq("sp") {
-    margin: 6vw 6vw 3vw 6vw;
+    margin: 5%;
+    margin-bottom: 0;
+    width: 90%;
   }
 }
 
 .p-card-eatin {
-  margin: 6vw 6vw 6vw 3vw;
+  margin: 6vw 5% 6vw 2.5%;
+  box-sizing: border-box;
   background-image: url(../../../img/card-eatin.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  width: 50%;
+  display:flex;
+  flex-direction: column;
+ 
   @include fw.mq("sp") {
-    margin: 3vw 6vw 6vw 6vw;
+    width: 90%;
+    margin: 5%;
   }
-}
-
-.p-card-title {
-  margin: 20px 15px;
 }
 
 .p-article {
@@ -40,6 +50,11 @@
     opacity: 0.8;
     margin: 3%;
     padding: 0 3% 3% 3%;
+    height: 100%;
+}
+
+.p-card-title {
+  margin: 20px 15px;
 }
 
 .p-article-title {
