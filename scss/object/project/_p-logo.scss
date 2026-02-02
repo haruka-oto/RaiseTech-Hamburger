@@ -3,11 +3,11 @@
 @use "../../foundation/breakpoint" as fw;
 
 .p-logo {
- width: 20vw;
+ width: 17vw;
  height: auto;
  margin-left: 30px;
   @include fw.mq("tab") {
     margin-left: 0 ;
-    width: clamp(203px,28.7vw,240vw);
+    width: clamp(203px,24vw,240vw);
   }
 }

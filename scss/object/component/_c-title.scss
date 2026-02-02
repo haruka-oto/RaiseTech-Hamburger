@@ -16,8 +16,8 @@ position: relative;
     width: clamp(33.89px,3.2vw,63px);
     height: 2px;
     background-color: rgb(255, 255, 255);
-    bottom: -40px;
-    left: 10px;
+    bottom: -1em;
+    left: 0;
 }
 }
 
@@ -27,7 +27,7 @@ position: relative;
 font-family: M+ 1p;
 font-weight: 700;
 font-size: 1.24vw;
-line-height: 24px;
+line-height: 1.5;
 color: rgb(60, 42, 16);
  @include fw.mq("sp") {
     font-size: 5.86vw;
@@ -38,14 +38,20 @@ color: rgb(60, 42, 16);
  font-family: M+ 1p;
 font-weight: 700;
 line-height: 100%;
-font-size: 20px;
+font-size: 2vw;
 color: rgb(255, 255, 255);
+ @include fw.mq("tab") {
+    font-size: 4.3vw;
+  }
+  @include fw.mq("sp") {
+    font-size: 9.6vw;
+  }
 }
 
 .c-map-title {
 font-family: M+ 1p;
 font-weight: 700;
-font-size: clamp(30px,1.9vw,37px);
+font-size: clamp(20px,1.9vw,37px);
 line-height: 100%;
 color:white;
 position: relative;
@@ -54,13 +60,19 @@ position: relative;
    
     content: "";
     position: absolute;
-    width: 3.2vw;
+    width: 3em;
     height: 2px;
     background-color: white;
-    bottom:-30px;
+    bottom:-1em;
     left: 80px;
     @include fw.mq("tab") {
-    width: 8.9vw;
+    bottom:-0.7em;
+    left: 5%;
+    width: 3em;
+  }
+   @include fw.mq("sp") {
+    bottom: -0.7em;
+    left: 10%;
   }
 
 }

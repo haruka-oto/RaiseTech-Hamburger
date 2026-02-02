@@ -4,9 +4,10 @@
 .p-seach-box {
     border: 1px solid #707070;
     border-radius: 10px;
-    width: 100%;
+    width: 20.6vw;
     background-color: rgb(255, 255, 255);
-    height: 30px;
+    height: auto;
+    aspect-ratio: 8.6/1;
     display: flex;
     align-items: center;
     
@@ -14,18 +15,29 @@
 @include fw.mq("tab") {
     width:47.4vw;
   }
+@include fw.mq("sp") {
+    width:57.5vw;
+    height: 12.2vw;
+  }
 }
 
 .p-seach-box button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
+    width: 1.04vw;
+    height: auto;
+    aspect-ratio: 1/1;
     border: none;
     background-color: transparent;
     cursor: pointer;
     margin-left: 5px;
+    @include fw.mq("tab") {
+    width:2.4vw;
+  }
+  @include fw.mq("sp") {
+    width:5.3vw;
+  }
 }
 
 .p-seach-box button::before {

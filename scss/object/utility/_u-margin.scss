@@ -1,3 +1,14 @@
+@charset "UTF-8";
+@use "../../foundation/breakpoint" as fw;
+
 .u-margin-article {
     margin-top: 60%;
+}
+
+ 
+.u-margin-pc {
+@include fw.mq("sp") {
+    margin-bottom: 70px;
+  }
+    
 }

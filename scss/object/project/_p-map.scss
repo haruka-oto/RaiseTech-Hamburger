@@ -6,7 +6,7 @@
    display: flex;
    align-items: stretch;
    flex-direction: column;
-    height: auto;
+   height: auto;
 }
 
 .p-map-text-area {
@@ -14,25 +14,30 @@
   flex-direction: column;
   height: 100%;
   position: relative;
+  z-index: 100;
 }
 
 .p-map-image {
-  background-image: url(../../../img/map.jpeg);
+  background-image: url(../../../img/map-new.jpg);
   background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
-  z-index: -99;
+  height: 100%;
+  object-fit: cover;
+  z-index: -999;
 }
 .p-map-shadow {
     width: 55vw;
     height: 100%;
+    background-image: url(../../../img/map-black.png);
+    background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -99;
+    z-index: -9;
+    object-fit: cover;
     @include fw.mq("tab") {
     width: 100%;
     
@@ -50,27 +55,41 @@
     opacity: 30%;
     width: 100%;
     height: 100%;
-    z-index: -9;
+    object-fit: cover;
+    z-index: -99;
 }
 
 
 .p-map-title {
-  padding-top: 80px;
+  padding-top: 7%;
   padding-left: 80px;
+  @include fw.mq("tab") {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+   @include fw.mq("sp") {
+    padding-left: 10%;
+  }
+
 }
 
 .p-map-text {
     width: 50%;
-    padding-top: 80px;
+    padding-top: 7%;
     padding-left: 80px;
     padding-bottom: 30px;
 
-    @include fw.mq("tab") {
+   @include fw.mq("tab") {
     width: 100%;
-    height: 100%;
-    top: 150px;
-    left: 50px;
-    width: 80%;
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  @include fw.mq("sp") {
+    width: 100%;
+    padding-top: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
   }
     
 }

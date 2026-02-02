@@ -1,10 +1,10 @@
 @use "foundation/base";
 @use "foundation/breakpoint";
-@use "layout/l-wrapper";
+@use "layout/l-main";
 @use "layout/l-header";
 @use "layout/l-sidebar";
 @use "layout/l-footer";
-@use "layout/l-mainbar";
+@use "layout/l-wrapper";
 @use "object/component/c-article";
 @use "object/component/c-list";
 @use "object/component/c-title";
@@ -20,7 +20,7 @@
 @use "object/utility/u-color--white";
 @use "object/utility/u-margin";
 @use "object/utility/u-tab-only";
-
+@use "object/utility/u-padding";
 
 
 
