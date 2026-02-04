@@ -4,14 +4,12 @@
 .l-footer {
    grid-area:foot;
     width: 100%;
-    height:14vh;
+    height:auto;
     background-image: url(../../img/footer.png);
     background-size: cover;
      display: flex;
      align-items: center;
      justify-content: center;
      flex-direction: column;
-  @include fw.mq("sp") {
-    height: 22vh;
-  }
+  
 }

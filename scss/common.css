@@ -74,18 +74,13 @@ img {
 .l-footer {
   grid-area: foot;
   width: 100%;
-  height: 14vh;
+  height: auto;
   background-image: url(../../img/footer.png);
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-@media screen and (max-width:430px) {
-  .l-footer {
-    height: 22vh;
-  }
 }
 
 .l-wrapper {
@@ -110,41 +105,40 @@ img {
 
 .c-article-text {
   font-weight: 400;
-  font-size: 0.83vw;
+  font-size: clamp(14px, 0.83vw, 16px);
   color: rgb(60, 42, 16);
 }
 @media screen and (max-width:430px) {
   .c-article-text {
-    font-size: 4.26vw;
+    font-size: clamp(14px, 4.26vw, 16px);
   }
 }
 
 .c-map-text {
   font-weight: 700;
-  font-size: 0.8vw;
+  font-size: clamp(14px, 0.8vw, 16px);
   line-height: 1.9;
   color: white;
-}
-@media screen and (max-width:834px) {
-  .c-map-text {
-    font-size: 1.6vw;
-  }
-}
-@media screen and (max-width:430px) {
-  .c-map-text {
-    font-size: 3.74vw;
-  }
 }
 
 .c-footer-text {
   font-size: 20px;
   line-height: 3;
 }
+@media screen and (max-width:430px) {
+  .c-footer-text {
+    font-size: 16px;
+  }
+}
+
+.c-footer-copyright {
+  font-size: 14px;
+}
 
 .c-menu-list {
   font-family: M1p;
   font-weight: 700;
-  font-size: 1.2vw;
+  font-size: clamp(16px, 1.2vw, 24px);
   line-height: 100%;
   color: rgb(112, 112, 112);
 }
@@ -152,7 +146,7 @@ img {
 .c-menu-list__child {
   font-family: M1p;
   font-weight: 400;
-  font-size: 1vw;
+  font-size: clamp(14px, 1vw, 20px);
   line-height: 100%;
   color: rgb(112, 112, 112);
 }
@@ -178,13 +172,13 @@ img {
 .c-article-title {
   font-family: M1p;
   font-weight: 700;
-  font-size: 1.24vw;
+  font-size: clamp(20px, 1.24vw, 24px);
   line-height: 1.5;
   color: rgb(60, 42, 16);
 }
 @media screen and (max-width:430px) {
   .c-article-title {
-    font-size: 5.86vw;
+    font-size: clamp(20px, 5.86vw, 22px);
   }
 }
 
@@ -202,14 +196,14 @@ img {
 }
 @media screen and (max-width:430px) {
   .c-main-visual-title {
-    font-size: 9.6vw;
+    font-size: clamp(14px, 9.6vw, 36px);
   }
 }
 
 .c-map-title {
   font-family: M1p;
   font-weight: 700;
-  font-size: clamp(20px, 1.9vw, 37px);
+  font-size: clamp(20px, 1.9vw, 36px);
   line-height: 100%;
   color: white;
   position: relative;
@@ -240,18 +234,13 @@ img {
 .c-menu-button {
   font-family: Roboto;
   font-weight: 700;
-  font-size: 1.7vw;
+  font-size: clamp(24px, 1.7vw, 34px);
   line-height: 100%;
   color: rgb(112, 112, 112);
 }
-@media screen and (max-width:834px) {
-  .c-menu-button {
-    font-size: 4vw;
-  }
-}
 @media screen and (max-width:430px) {
   .c-menu-button {
-    font-size: 5.3vw;
+    font-size: 20px;
   }
 }
 

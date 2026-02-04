@@ -3,29 +3,30 @@
 
 .c-article-text {
 font-weight: 400;
-font-size: 0.83vw;
+font-size: clamp(14px,0.83vw,16px);
 color: rgb(60, 42, 16);
  @include fw.mq("sp") {
-    font-size: 4.26vw;
+    font-size: clamp(14px,4.26vw,16px);
   }
 
 }
 
 .c-map-text {
 font-weight: 700;
-font-size: 0.8vw;
+font-size: clamp(14px,0.8vw,16px);
 line-height: 1.9;
 color:white;
-@include fw.mq("tab") {
-   font-size: 1.6vw;
-  }
-@include fw.mq("sp") {
-    font-size: 3.74vw;
-  }
-
 }
 
 .c-footer-text {
   font-size: 20px;
   line-height: 3;
+   @include fw.mq("sp") {
+    font-size: 16px;
+  }
+
+}
+
+.c-footer-copyright {
+  font-size: 14px;
 }

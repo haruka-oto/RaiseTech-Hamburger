@@ -4,13 +4,10 @@
 .c-menu-button {
 font-family: Roboto;
 font-weight: 700;
-font-size: 1.7vw;
+font-size: clamp(24px,1.7vw,34px);
 line-height: 100%;
 color: rgb(112, 112, 112);
- @include fw.mq("tab") {
-    font-size: 4vw;
-  }
   @include fw.mq("sp") {
-    font-size: 5.3vw;
+    font-size:20px;
   }
 }

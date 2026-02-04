@@ -26,11 +26,11 @@ position: relative;
 .c-article-title {
 font-family: M+ 1p;
 font-weight: 700;
-font-size: 1.24vw;
+font-size:clamp(20px,1.24vw,24px);
 line-height: 1.5;
 color: rgb(60, 42, 16);
  @include fw.mq("sp") {
-    font-size: 5.86vw;
+    font-size:clamp(20px,5.86vw,22px);
   }
 }
 
@@ -44,14 +44,14 @@ color: rgb(255, 255, 255);
     font-size: 4.3vw;
   }
   @include fw.mq("sp") {
-    font-size: 9.6vw;
+    font-size: clamp(14px,9.6vw,36px);
   }
 }
 
 .c-map-title {
 font-family: M+ 1p;
 font-weight: 700;
-font-size: clamp(20px,1.9vw,37px);
+font-size: clamp(20px,1.9vw,36px);
 line-height: 100%;
 color:white;
 position: relative;
