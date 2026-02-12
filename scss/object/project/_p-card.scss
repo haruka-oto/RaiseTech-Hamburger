@@ -9,7 +9,8 @@
     justify-content: center;
   }
 }
-.p-card-takeout {
+
+.p-card--takeout {
   margin: 6vw 2.5% 6vw 5% ;
   box-sizing: border-box;
   background-image: url(../../../img/card-takeout.png);
@@ -28,7 +29,7 @@
   }
 }
 
-.p-card-eatin {
+.p-card--eatin {
   margin: 6vw 5% 6vw 2.5%;
   box-sizing: border-box;
   background-image: url(../../../img/card-eatin.jpg);
@@ -45,19 +46,26 @@
   }
 }
 
-.p-article {
-    background: rgb(255, 255, 255);
-    opacity: 0.8;
-    margin: 3%;
-    padding: 0 3% 3% 3%;
-    height: 100%;
-}
 
-.p-card-title {
-  margin: 20px 15px;
-}
+.p-card__title {
+font-family: Roboto;
+font-weight: 700;
+font-size: clamp(35px,5.2vw,80px);
+line-height: 100%;
+color: rgb(234, 234, 234);
+position: relative;
+margin: 20px 15px;
 
-.p-article-title {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+ &::before{
+   
+    content: "";
+    position: absolute;
+    width: clamp(33.89px,3.2vw,63px);
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    bottom: -1em;
+    left: 0;
 }
+}
+  
+

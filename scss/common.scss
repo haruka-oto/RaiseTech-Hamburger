@@ -1,14 +1,18 @@
+/*foundation*/
 @use "foundation/base";
 @use "foundation/breakpoint";
+/*layout*/
 @use "layout/l-main";
 @use "layout/l-header";
 @use "layout/l-sidebar";
 @use "layout/l-footer";
-@use "layout/l-wrapper";
-@use "object/component/c-article";
+@use "layout/l-grid";
+/*object*/
+@use "object/component/c-copyright";
 @use "object/component/c-list";
-@use "object/component/c-title";
-@use "object/component/c-button";
+@use "object/component/c-menu-button";
+@use "object/component/_c-footer-title";
+@use "object/project/p-article";
 @use "object/project/p-header-inner";
 @use "object/project/p-search-box";
 @use "object/project/p-search-button";

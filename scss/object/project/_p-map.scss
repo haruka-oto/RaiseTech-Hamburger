@@ -9,7 +9,7 @@
    height: auto;
 }
 
-.p-map-text-area {
+.p-map__textarea {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -28,6 +28,7 @@
   object-fit: cover;
   z-index: -999;
 }
+
 .p-map-shadow {
     width: 55vw;
     height: 100%;
@@ -48,7 +49,7 @@
 }
 }
 
-.p-map-shadow__big {
+.p-map-shadow-big {
    position: absolute;
    top: 0;
    left: 0;
@@ -60,9 +61,35 @@
 }
 
 
-.p-map-title {
+.p-map__title {
   padding-top: 7%;
   padding-left: 80px;
+  font-family: M+ 1p;
+  font-weight: 700;
+  font-size: clamp(20px,1.9vw,36px);
+  line-height: 100%;
+  color:white;
+  position: relative;
+  &::before{
+   
+    content: "";
+    position: absolute;
+    width: 3em;
+    height: 2px;
+    background-color: white;
+    bottom:-1em;
+    left: 80px;
+    @include fw.mq("tab") {
+    bottom:-0.7em;
+    left: 5%;
+    width: 3em;
+  }
+   @include fw.mq("sp") {
+    bottom: -0.7em;
+    left: 10%;
+  }
+  }
+
   @include fw.mq("tab") {
     padding-right: 5%;
     padding-left: 5%;
@@ -73,7 +100,11 @@
 
 }
 
-.p-map-text {
+.p-map__text {
+    font-weight: 700;
+    font-size: clamp(14px,0.8vw,16px);
+    line-height: 1.9;
+    color:white;
     width: 50%;
     padding-top: 7%;
     padding-left: 80px;
@@ -89,7 +120,7 @@
     width: 100%;
     padding-top: 10%;
     padding-right: 10%;
-    padding-left: 10%;
+   padding-left: 10%;
   }
     
 }

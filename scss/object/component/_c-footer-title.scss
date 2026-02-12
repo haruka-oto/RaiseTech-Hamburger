@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@use "../../foundation/breakpoint" as fw;
+
+.c-footer-title {
+  font-size: 20px;
+  line-height: 3;
+   @include fw.mq("sp") {
+    font-size: 16px;
+  }
+
+}
