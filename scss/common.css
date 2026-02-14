@@ -26,11 +26,11 @@ img {
 
 /*　メディアクエリ設定　*/
 /*layout*/
-.l-main__grid {
+.l-main {
   grid-area: main;
 }
 @media screen and (max-width:834px) {
-  .l-main__grid {
+  .l-main {
     grid-column: 1;
   }
 }
@@ -40,18 +40,16 @@ img {
   height: auto;
   background: rgb(255, 247, 239);
   position: relative;
-}
-
-.l-header__grid {
   grid-area: head;
 }
 @media screen and (max-width:834px) {
-  .l-header__grid {
+  .l-header {
     grid-column: 1;
   }
 }
 
 .l-sidebar {
+  grid-area: side;
   width: 20vw;
   height: auto;
   background-color: #F2EDE9;
@@ -62,11 +60,8 @@ img {
   }
 }
 
-.l-sidebar__grid {
-  grid-area: side;
-}
-
 .l-footer {
+  grid-area: foot;
   width: 100%;
   height: auto;
   background-image: url(../../img/footer.png);
@@ -75,10 +70,6 @@ img {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-.l-footer__grid {
-  grid-area: foot;
 }
 
 /*object*/

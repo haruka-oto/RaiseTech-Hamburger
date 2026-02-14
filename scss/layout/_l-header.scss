@@ -6,12 +6,9 @@
     height:auto;
     background: rgb(255, 247, 239);
     position: relative;
-  
-  }  
-
-.l-header__grid {
-  grid-area: head;
+    grid-area: head;
   @include fw.mq("tab") {
     grid-column: 1;
 }
-}
+  
+  }  
