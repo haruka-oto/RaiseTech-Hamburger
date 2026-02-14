@@ -48,19 +48,6 @@ img {
   }
 }
 
-.l-seach-area {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 35%;
-}
-@media screen and (max-width:834px) {
-  .l-seach-area {
-    margin-top: 30px;
-    width: auto;
-  }
-}
-
 .l-sidebar {
   grid-area: side;
   width: 20vw;
@@ -85,7 +72,8 @@ img {
   flex-direction: column;
 }
 
-.l-grid {
+/*object*/
+.c-grid {
   display: grid;
   grid-template-columns: 1fr 20%;
   grid-template-rows: 7% 0.88fr 5%;
@@ -93,19 +81,18 @@ img {
   min-height: 100vh;
 }
 @media screen and (max-width:834px) {
-  .l-grid {
+  .c-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 11% 0.81fr 8%;
   }
 }
 @media screen and (max-width:430px) {
-  .l-grid {
+  .c-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 8% 0.86fr 6%;
   }
 }
 
-/*object*/
 .c-copyright {
   font-size: 14px;
 }
@@ -147,6 +134,23 @@ img {
   .c-footer-title {
     font-size: 16px;
   }
+}
+
+.c-seach-button {
+  border: 1px solid rgb(112, 112, 112);
+  border-radius: 10px;
+  color: rgb(112, 112, 112);
+  font-weight: 700;
+  font-size: clamp(10px, 0.83vw, 16px);
+  background: linear-gradient(rgb(242, 237, 233), rgb(222, 216, 211));
+  aspect-ratio: 3/1;
+}
+
+.c-seach-box {
+  border: 1px solid #707070;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  aspect-ratio: 8.6/1;
 }
 
 .p-article {
@@ -193,86 +197,6 @@ img {
   .p-header-inner {
     flex-direction: column;
     justify-content: center;
-  }
-}
-
-.p-seach-box {
-  border: 1px solid #707070;
-  border-radius: 10px;
-  width: 20.6vw;
-  background-color: rgb(255, 255, 255);
-  height: auto;
-  aspect-ratio: 8.6/1;
-  display: flex;
-  align-items: center;
-}
-@media screen and (max-width:834px) {
-  .p-seach-box {
-    width: 47.4vw;
-  }
-}
-@media screen and (max-width:430px) {
-  .p-seach-box {
-    width: 57.5vw;
-    height: 12.2vw;
-  }
-}
-
-.p-seach-box button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1.04vw;
-  height: auto;
-  aspect-ratio: 1/1;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  margin-left: 5px;
-}
-@media screen and (max-width:834px) {
-  .p-seach-box button {
-    width: 2.4vw;
-  }
-}
-@media screen and (max-width:430px) {
-  .p-seach-box button {
-    width: 5.3vw;
-  }
-}
-
-.p-seach-box button::before {
-  aspect-ratio: 1/1;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  background-image: url(../../../img/serchbox-logo.png);
-  background-repeat: no-repeat;
-  content: "";
-}
-
-.p-seach-button {
-  border: 1px solid rgb(112, 112, 112);
-  border-radius: 10px;
-  color: rgb(112, 112, 112);
-  font-weight: 700;
-  font-size: clamp(10px, 0.83vw, 16px);
-  width: 7vw;
-  height: auto;
-  aspect-ratio: 3/1;
-  margin-left: 14px;
-  margin-right: 20px;
-  background: linear-gradient(rgb(242, 237, 233), rgb(222, 216, 211));
-}
-@media screen and (max-width:834px) {
-  .p-seach-button {
-    width: 16.3vw;
-  }
-}
-@media screen and (max-width:430px) {
-  .p-seach-button {
-    width: 24vw;
-    height: 12.2vw;
   }
 }
 
@@ -538,6 +462,88 @@ img {
   .p-logo {
     margin-left: 0;
     width: clamp(203px, 24vw, 240vw);
+  }
+}
+
+.p-seach-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 35%;
+}
+@media screen and (max-width:834px) {
+  .p-seach-area {
+    margin-top: 30px;
+    width: auto;
+  }
+}
+
+.p-seach-area__box {
+  width: 20.6vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width:834px) {
+  .p-seach-area__box {
+    width: 47.4vw;
+  }
+}
+@media screen and (max-width:430px) {
+  .p-seach-area__box {
+    width: 57.5vw;
+    height: 12.2vw;
+  }
+}
+
+.p-seach-area__box button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.04vw;
+  height: auto;
+  aspect-ratio: 1/1;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 5px;
+}
+@media screen and (max-width:834px) {
+  .p-seach-area__box button {
+    width: 2.4vw;
+  }
+}
+@media screen and (max-width:430px) {
+  .p-seach-area__box button {
+    width: 5.3vw;
+  }
+}
+
+.p-seach-area__box button::before {
+  aspect-ratio: 1/1;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../img/serchbox-logo.png);
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.p-seach-area__button {
+  width: 7vw;
+  height: auto;
+  margin-left: 14px;
+  margin-right: 20px;
+}
+@media screen and (max-width:834px) {
+  .p-seach-area__button {
+    width: 16.3vw;
+  }
+}
+@media screen and (max-width:430px) {
+  .p-seach-area__button {
+    width: 24vw;
+    height: 12.2vw;
   }
 }
 

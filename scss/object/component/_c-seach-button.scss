@@ -1,0 +1,9 @@
+.c-seach-button {
+    border: 1px solid rgb(112, 112, 112);
+    border-radius: 10px;
+    color:rgb(112, 112, 112);
+    font-weight: 700;
+    font-size: clamp(10px,0.83vw,16px);
+    background: linear-gradient(rgb(242, 237, 233),rgb(222, 216, 211));
+    aspect-ratio: 3/1;
+}

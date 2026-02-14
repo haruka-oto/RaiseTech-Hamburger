@@ -1,13 +1,20 @@
 @charset "UTF-8";
 @use "../../foundation/breakpoint" as fw;
 
-.p-seach-box {
-    border: 1px solid #707070;
-    border-radius: 10px;
+.p-seach-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 35%;
+    @include fw.mq("tab") {
+    margin-top: 30px;
+    width: auto;
+  }
+}
+
+.p-seach-area__box {
     width: 20.6vw;
-    background-color: rgb(255, 255, 255);
     height: auto;
-    aspect-ratio: 8.6/1;
     display: flex;
     align-items: center;
     
@@ -21,7 +28,7 @@
   }
 }
 
-.p-seach-box button {
+.p-seach-area__box button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +47,7 @@
   }
 }
 
-.p-seach-box button::before {
+.p-seach-area__box button::before {
     aspect-ratio: 1/1;
     background-size: cover;
     width: 100%;
@@ -48,4 +55,19 @@
     background-image: url(../../../img/serchbox-logo.png);
     background-repeat: no-repeat;
     content: '';
+}
+
+.p-seach-area__button {
+    width: 7.0vw;
+    height: auto;
+    margin-left: 14px;
+    margin-right: 20px;
+
+    @include fw.mq("tab") {
+    width: 16.3vw;
+  }
+  @include fw.mq("sp") {
+    width: 24vw;
+    height: 12.2vw;
+  }
 }
