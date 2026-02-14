@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @use "../foundation/breakpoint" as fw;
 
-.l-main {
+.l-main__grid {
     grid-area: main;
     @include fw.mq("tab") {
     grid-column: 1;

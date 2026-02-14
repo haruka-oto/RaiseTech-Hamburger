@@ -26,30 +26,32 @@ img {
 
 /*　メディアクエリ設定　*/
 /*layout*/
-.l-main {
+.l-main__grid {
   grid-area: main;
 }
 @media screen and (max-width:834px) {
-  .l-main {
+  .l-main__grid {
     grid-column: 1;
   }
 }
 
 .l-header {
-  grid-area: head;
   width: auto;
   height: auto;
   background: rgb(255, 247, 239);
   position: relative;
 }
+
+.l-header__grid {
+  grid-area: head;
+}
 @media screen and (max-width:834px) {
-  .l-header {
+  .l-header__grid {
     grid-column: 1;
   }
 }
 
 .l-sidebar {
-  grid-area: side;
   width: 20vw;
   height: auto;
   background-color: #F2EDE9;
@@ -60,8 +62,11 @@ img {
   }
 }
 
+.l-sidebar__grid {
+  grid-area: side;
+}
+
 .l-footer {
-  grid-area: foot;
   width: 100%;
   height: auto;
   background-image: url(../../img/footer.png);
@@ -70,6 +75,10 @@ img {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.l-footer__grid {
+  grid-area: foot;
 }
 
 /*object*/
@@ -288,9 +297,6 @@ img {
   line-height: 100%;
   font-size: 2vw;
   color: rgb(255, 255, 255);
-  position: absolute;
-  top: 40%;
-  margin-left: 30px;
 }
 @media screen and (max-width:834px) {
   .p-main-visual__title {
@@ -301,6 +307,11 @@ img {
   .p-main-visual__title {
     font-size: clamp(14px, 9.6vw, 36px);
   }
+}
+.p-main-visual__title {
+  position: absolute;
+  top: 40%;
+  margin-left: 30px;
 }
 
 .p-map {

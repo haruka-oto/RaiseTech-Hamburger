@@ -2,13 +2,16 @@
 @use "../foundation/breakpoint" as fw;
 
 .l-header {
-   grid-area: head;
     width: auto;
     height:auto;
     background: rgb(255, 247, 239);
     position: relative;
-    @include fw.mq("tab") {
-    grid-column: 1;
-  }
-}
+  
+  }  
 
+.l-header__grid {
+  grid-area: head;
+  @include fw.mq("tab") {
+    grid-column: 1;
+}
+}

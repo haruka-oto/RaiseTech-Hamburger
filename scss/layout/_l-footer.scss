@@ -2,7 +2,6 @@
 @use "../foundation/breakpoint" as fw;
 
 .l-footer {
-   grid-area:foot;
     width: 100%;
     height:auto;
     background-image: url(../../img/footer.png);
@@ -12,4 +11,9 @@
      justify-content: center;
      flex-direction: column;
   
+}
+
+.l-footer__grid {
+   grid-area:foot;
+
 }
