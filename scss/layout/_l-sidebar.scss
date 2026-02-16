@@ -1,12 +1,12 @@
 .l-sidebar {
-    grid-area: side;
-    width: 20vw;
-    height: auto;
-    background-color:#F2EDE9;
-     @media screen and (max-width:834px) {
-        display: none;
+   grid-area: side;
+   width: 20vw;
+   height: auto;
+   background-color:#F2EDE9;
+   @media screen and (max-width:834px) {
+      display: none;
     
-     }
+   }
 
 
 }

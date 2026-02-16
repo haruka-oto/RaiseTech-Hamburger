@@ -3,11 +3,11 @@
 
 
 .p-article {
-    background: rgb(255, 255, 255);
-    opacity: 0.8;
-    margin: 3%;
-    padding: 0 3% 3% 3%;
-    height: 100%;
+  background: rgb(255, 255, 255);
+  opacity: 0.8;
+  margin: 3%;
+  padding: 0 3% 3% 3%;
+  height: 100%;
 }
 
 .p-article__title {
@@ -24,9 +24,9 @@
 }
 
 .p-article__text {
-font-weight: 400;
-font-size: clamp(14px,0.83vw,16px);
-color: rgb(60, 42, 16);
+  font-weight: 400;
+  font-size: clamp(14px,0.83vw,16px);
+  color: rgb(60, 42, 16);
  @include fw.mq("sp") {
     font-size: clamp(14px,4.26vw,16px);
   }

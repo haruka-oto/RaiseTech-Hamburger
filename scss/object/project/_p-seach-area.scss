@@ -17,12 +17,14 @@
     height: auto;
     display: flex;
     align-items: center;
-    
-    
-@include fw.mq("tab") {
+    border: 1px solid #707070;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    aspect-ratio: 8.6/1;
+    @include fw.mq("tab") {
     width:47.4vw;
   }
-@include fw.mq("sp") {
+    @include fw.mq("sp") {
     width:57.5vw;
     height: 12.2vw;
   }

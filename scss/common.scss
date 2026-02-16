@@ -10,10 +10,7 @@
 @use "object/component/c-grid";
 @use "object/component/c-copyright";
 @use "object/component/c-list";
-@use "object/component/c-menu-button";
-@use "object/component/_c-footer-title";
-@use "object/component/c-seach-button";
-@use "object/component/c-seach-box";
+@use "object/component/c-button";
 @use "object/project/p-article";
 @use "object/project/p-header-inner";
 @use "object/project/p-card";
@@ -22,7 +19,8 @@
 @use "object/project/p-sidebar";
 @use "object/project/p-logo";
 @use "object/project/p-seach-area";
-@use "object/utility/u-color--white";
+@use "object/project/p-footer";
+@use "object/utility/u-color";
 @use "object/utility/u-margin";
 @use "object/utility/u-tab-only";
 @use "object/utility/u-padding";

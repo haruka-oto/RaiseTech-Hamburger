@@ -2,8 +2,8 @@
 @use "../foundation/breakpoint" as fw;
 
 .l-main {
-    grid-area: main;
-    @include fw.mq("tab") {
-    grid-column: 1;
+  grid-area: main;
+  @include fw.mq("tab") {
+  grid-column: 1;
   }
 }

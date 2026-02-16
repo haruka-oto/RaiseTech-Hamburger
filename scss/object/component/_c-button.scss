@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@use "../../foundation/breakpoint" as fw;
+
+.c-button--menu {
+font-family: Roboto;
+font-weight: 700;
+font-size: clamp(24px,1.7vw,34px);
+line-height: 100%;
+color: rgb(112, 112, 112);
+  @include fw.mq("sp") {
+    font-size:20px;
+  }
+}
+
+.c-button--seach {
+    border: 1px solid rgb(112, 112, 112);
+    border-radius: 10px;
+    color:rgb(112, 112, 112);
+    font-weight: 700;
+    font-size: clamp(10px,0.83vw,16px);
+    background: linear-gradient(rgb(242, 237, 233),rgb(222, 216, 211));
+    aspect-ratio: 3/1;
+}

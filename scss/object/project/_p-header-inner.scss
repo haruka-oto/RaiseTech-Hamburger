@@ -2,12 +2,12 @@
 @use "../../foundation/breakpoint" as fw;
 
 .p-header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 
-     @include fw.mq("tab") {
+    @include fw.mq("tab") {
     flex-direction: column;
     justify-content: center;
   }
