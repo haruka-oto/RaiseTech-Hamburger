@@ -1,4 +1,10 @@
+@charset "UTF-8";
+@use "../../foundation/breakpoint" as fw;
+
 .u-padding-top {
     padding-top: 0;
+    @include fw.mq("tab") {
+    padding-top: 200px;
+  }
 
 }

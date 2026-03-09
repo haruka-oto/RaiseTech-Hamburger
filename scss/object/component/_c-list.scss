@@ -1,9 +1,19 @@
+@charset "UTF-8";
+@use "../../foundation/breakpoint" as fw;
+
+
 .c-menu-list {
 font-family: M+ 1p;
 font-weight: 700;
 font-size: clamp(16px,1.2vw,24px);
 line-height: 100%;
 color: rgb(112, 112, 112);
+ @include fw.mq("tab") {
+    font-size: clamp(16px,2.9vw,24px);
+  }
+ @include fw.mq("sp") {
+    font-size: clamp(16px,6.4vw,24px);
+  }
 
 }
 .c-menu-list__child {
@@ -12,4 +22,11 @@ font-weight: 400;
 font-size: clamp(14px,1vw,20px);
 line-height: 100%;
 color: rgb(112, 112, 112);
+ @include fw.mq("tab") {
+    font-size: clamp(14px,2.5vw,20px);
+  }
+ @include fw.mq("sp") {
+    font-size: clamp(14px,5.3vw,20px);
+  }
+
 }

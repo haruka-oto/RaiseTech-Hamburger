@@ -13,9 +13,15 @@
   @include fw.mq("tab") {
   grid-template-columns: 1fr;
   grid-template-rows: 11% 0.81fr 8%;
+  grid-template-areas: "head side"
+   "main side"
+   "foot side";
   }
   @include fw.mq("sp") {
   grid-template-columns: 1fr;
   grid-template-rows: 8% 0.86fr 6%;
+  grid-template-areas: "head side"
+   "main side"
+   "foot side";
   }
 }
