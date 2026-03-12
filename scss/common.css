@@ -9,6 +9,10 @@ body {
   min-height: 100vh;
 }
 
+.is-fixed {
+  overflow: hidden;
+}
+
 li {
   list-style: none;
 }
@@ -78,7 +82,7 @@ img {
 }
 
 .is-active {
-  position: absolute;
+  position: fixed;
   width: 44vw;
   height: 100%;
   z-index: 2000;
@@ -88,6 +92,8 @@ img {
   transition-delay: 200ms;
   transition-duration: 400ms;
   transition-property: all;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
 }
 @media screen and (max-width:430px) {
   .is-active {
@@ -119,7 +125,7 @@ img {
   .c-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 11% 0.81fr 8%;
-    grid-template-areas: "head side" "main side" "foot side";
+    grid-template-areas: "head" "main" "foot";
   }
 }
 @media screen and (max-width:430px) {
@@ -565,7 +571,15 @@ img {
 .p-sidebar-container {
   position: relative;
   min-height: 100%;
+}
+
+.p-sidebar__fixed {
+  overflow: visible;
+}
+
+.is-fixed {
   overflow: hidden;
+  position: fixed;
 }
 
 .p-logo {

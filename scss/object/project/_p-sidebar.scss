@@ -57,5 +57,14 @@
   .p-sidebar-container {
     position: relative;
     min-height: 100%;
-    overflow: hidden;
   }
+
+  .p-sidebar__fixed {
+    overflow: visible;
+  }
+
+  .is-fixed {
+    overflow: hidden;
+    position: fixed;
+  }
+
