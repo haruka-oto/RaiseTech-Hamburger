@@ -28,7 +28,7 @@
     width: 100%;
     height: 100%;
     background: rgba(3,3,3,0.5);
-    z-index: 1000;
+    z-index: -100;
     display: block;
     transition-delay: 1ms;
     transition-duration:300ms;
@@ -68,3 +68,4 @@
     position: fixed;
   }
 
+  

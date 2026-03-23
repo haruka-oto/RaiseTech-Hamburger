@@ -54,10 +54,11 @@
                 <h1><img class="p-logo" src="./img/pc_logo.png"></h1>
               <!--検索ボックス-->
                 <div class="p-seach-area">
-                     <form action="#" class="p-seach-area__box">
-                     <button type="submit" aria-label="検索"></button>
-                     </form>
-                     <input type="submit" value="検索" class="c-button--seach p-seach-area__button">
+                        <form  class="p-search__container">
+                        <button class=p-search__logo type="submit" aria-label="検索"></button>
+                        <input name=seach-box class="p-seach-area__box">
+                        </form>
+                     <button type="submit" type=submit onclick="alert('クリックされました！')"  class="c-button--seach p-seach-area__button">検索</button>
                 </div>
             </div>
             <button class="c-button--menu u-tab-only js-buttonToggle">Menu</button>
