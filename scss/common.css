@@ -631,6 +631,7 @@ img {
 .p-seach-area__box {
   outline: 0;
   width: 100%;
+  padding-left: 3px;
 }
 
 .p-seach-area__box button {
@@ -659,6 +660,8 @@ img {
 .p-search__logo {
   position: relative;
   left: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .p-search__logo::before {
