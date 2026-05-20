@@ -1,9 +1,9 @@
-
 let nav = document.querySelector('.js-sidebarToggle')
 let btn = document.querySelector('.js-buttonToggle')
 let bg = document.querySelector('.js-bgToggle')
 let btnclose = document.querySelector('.js-buttonToggle-close')
 let fixed = document.body;
+
 
 btn.addEventListener('click', function() {
   bg.classList.toggle('is-open');
@@ -18,18 +18,23 @@ btnclose.addEventListener('click',function(){
   fixed.classList.toggle('is-fixed');
 });
 
-let pcBreakpoint = window.matchMedia('(min-width: 835px)');
+let pcBreakpoint = window.matchMedia('(min-width: 834px)');
 
 function handleTabletMobileChange(e) {
   if(e.matches) {
   nav.classList.remove('is-active');
   bg.classList.remove('is-open');
   fixed.classList.remove('is-fixed');
-
+  nav.classList.remove('l-sidebar__animation');
+  
 } else {
   console.log('タブレット以下')
+  nav.classList.add('l-sidebar__animation');
+
+ 
 };
 };
+
 
 
 

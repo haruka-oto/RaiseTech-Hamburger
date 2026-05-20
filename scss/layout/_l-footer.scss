@@ -11,5 +11,13 @@
    align-items: center;
    justify-content: center;
    flex-direction: column;
+    @include fw.mq("tab") {
+    width: 100vw;
+}
+    
+    @include fw.mq("sp") {
+    width: 100vw;
+    
+}
   
 }

@@ -54,3 +54,24 @@ color: rgb(112, 112, 112);
   }
  
   }
+
+.c-button--panel {
+  color: rgb(112, 112, 112);
+  background-color: white;
+  border-radius: 100vh;
+  font-family: M+ 1p;
+  font-weight: 700;
+  font-size: clamp(12px,0.83vw,16px);
+  width: 15.2vw;
+  height: 4vw;
+  @include fw.mq("tab") {
+    font-size: clamp(12px,1.9vw,16px);
+    width: 19.5vw;
+    height: 5.3vw;
+  }
+  @include fw.mq("sp") {
+    font-size: clamp(12px,4.2vw,16px);
+    width: 43vw;
+    height: 11vw;
+  }
+}

@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@use "../../foundation/breakpoint" as fw;
+
+.p-heading {
+    margin: 4%;
+}
+
+.p-heading__title {
+    font-family: M+ 1p;
+    font-weight: 700;
+    color: rgb(60, 42, 16);
+    font-size: clamp(16px,1.8vw,36px);
+}
+
+.p-heading__text {
+    font-size: clamp(14px,0.83vw,16px);
+    font-family: M+ 1p;
+    color: rgb(60, 42, 16);
+    padding-top: 10px;
+}

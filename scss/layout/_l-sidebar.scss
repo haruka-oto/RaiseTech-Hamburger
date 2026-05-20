@@ -10,40 +10,62 @@
    
   @include fw.mq("tab") {
     position: absolute;
-    right: -1000px;
-    transform:translateX(-100px);
-    transition-delay: 100ms;
-    transition-duration:400ms;
-    transition-property: all;
+    opacity: 0;
+    right: 20vw;
+    z-index: -2000;
+    width: 15vh;
 }
     
     @include fw.mq("sp") {
-    width: 87.4vw;
+    width: 15vw;
     position: absolute;
-    right: -1000px;
-    transform:translateX(-100px);
-    transition-delay: 100ms;
-    transition-duration:400ms;
-    transition-property: all;
+    right: 40vw;
+    z-index: -2000;
     
 }
+}
+
+.l-sidebar__animation {
+    @include fw.mq("tab") {
+    position: absolute;
+    transform:translateX(100%);
+    transition-delay: 100ms;
+    transition-duration:400ms;
+    transition-property:all;
+    opacity: 0;
+    right: 20vw;
+    z-index: -2000;
+    width: 15vh;
+}
+    
+    @include fw.mq("sp") {
+    width: 15vw;
+    position: absolute;
+    transform:translateX(100%);
+    transition-delay: 100ms;
+    transition-duration:400ms;
+    transition-property:all;
+    right: 40vw;
+    z-index: -2000;
+
+}
+
 }
   
 
 
 .is-active {
-     position: fixed;
-     width: 44vw;
-     height: 100%;
+     width: 40vw;
      z-index: 2000;
      right: 0;
-     opacity: 1;
      transform: translateX(0);
      transition-delay: 200ms;
      transition-duration:400ms;
-     transition-property: all;
+     transition-property:all;
      overflow-y: scroll;
      overscroll-behavior: contain;
+     height:100vh;
+     opacity: 1;
       @include fw.mq("sp") {
      width: 87.4vw;
 }
