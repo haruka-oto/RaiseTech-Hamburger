@@ -983,6 +983,9 @@ img {
 .p-panel__image {
   width: 50%;
   height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: 25% 50%;
 }
 @media screen and (max-width:430px) {
   .p-panel__image {
