@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@use "../../foundation/breakpoint" as fw;
+
+.p-mainvisual-blog {
+    background-image: url(../../../img/mainvisual-single.png);
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/1;
+    background-size: cover;
+    background-position: 50%;
+    display: flex;
+    align-items: center;
+    @include fw.mq("tab") {
+        aspect-ratio: 1.6/1;
+  }
+}
+.p-mainvisual-blog__text {
+    color: white;
+    font-family: M+ 1p;
+    font-weight: 700;
+    font-size: clamp(16px,3.1vw,60px);
+    padding-left: 20px;
+    @include fw.mq("tab") {
+        font-size: clamp(16px,7.1vw,60px);
+  }
+    @include fw.mq("tab") {
+        font-size: clamp(16px,9.6vw,36px);
+  }
+}

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+@use "../../foundation/breakpoint" as fw;
+
+.p-blog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    grid-template-rows: auto;
+    margin-bottom: 3%;
+    @include fw.mq("tab") {
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 8%;
+  }
+    @include fw.mq("sp") {
+        grid-template-columns: 1fr;
+  }
+}
+
+.p-blog-grid__image {
+    width: 100%;
+    height: auto;
+}
+
+.p-blog-grid__item {
+    background-image: url(../../../img/blog.png);
+}

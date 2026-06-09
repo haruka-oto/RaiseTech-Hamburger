@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@use "../../foundation/breakpoint" as fw;
+
+.sub-content {
+    background-color: rgb(245, 245, 245);
+    margin-bottom: 5%;
+    padding: 5%;
+    font-size: 16px;
+    @include fw.mq("tab") {
+        margin-bottom: 8%;
+  }
+}

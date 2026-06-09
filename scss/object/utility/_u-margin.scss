@@ -16,3 +16,16 @@
 .u-margin-pagenation {
   margin-left: 5px;
 }
+
+.u-margin-heading {
+  @include fw.mq("tab") {
+    margin-bottom: 10px;
+  }
+  @include fw.mq("tab") {
+    margin-bottom: 0;
+  }
+}
+
+.u-margin-post {
+  margin-left: 3%;
+}

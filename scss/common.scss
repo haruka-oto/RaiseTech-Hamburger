@@ -12,7 +12,6 @@
 @use "object/component/c-list";
 @use "object/component/c-button";
 /*object/project*/
-@use "object/project/p-article";
 @use "object/project/p-header-inner";
 @use "object/project/p-card";
 @use "object/project/p-mainvisual";
@@ -25,6 +24,12 @@
 @use "object/project/p-mainvisual-sub";
 @use "object/project/p-heading";
 @use "object/project/p-panel";
+@use "object/project/p-blog-grid";
+@use "object/project/p-mainvisual-blog";
+@use "object/project/p-post";
+@use "object/project/p-blockquote";
+@use "object/project/p-table";
+@use "object/project/p-sub-content";
 /*object/utility*/
 @use "object/utility/u-color";
 @use "object/utility/u-margin";

@@ -1,0 +1,34 @@
+
+@charset "UTF-8";
+@use "../../foundation/breakpoint" as fw;
+
+.p-table {
+    border-spacing: 0;
+    width: 100%;
+    background-color: white;
+    color: rgb(60, 42, 16);
+    font-size: 16px;
+    margin-bottom: 5%;
+    @include fw.mq("tab") {
+        margin-bottom: 8%;
+  }
+}
+.p-table__cell {
+    border: solid 1px rgb(112, 112, 112);
+    width: 60%;
+    line-height: 3;
+    padding-left: 3%;
+    @include fw.mq("sp") {
+        line-height: 4;
+  }
+}
+
+.p-table__cell-small {
+    border: solid 1px rgb(112, 112, 112);
+    width: 40%;
+    line-height: 3;
+    padding-left: 3%;
+    @include fw.mq("sp") {
+        line-height: 4;
+  }
+}
