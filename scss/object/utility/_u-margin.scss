@@ -19,10 +19,7 @@
 
 .u-margin-heading {
   @include fw.mq("tab") {
-    margin-bottom: 10px;
-  }
-  @include fw.mq("tab") {
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
 }
 

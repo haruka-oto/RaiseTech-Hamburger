@@ -5,22 +5,34 @@
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 3%;
-    @include fw.mq("sp") {
-        margin-top: 8%;
-  }
     
 }
 .p-post__container {
     display: flex;
-    padding-bottom: 5%;
+    margin-bottom: 5%;
     justify-content: center;
     align-items: flex-start;
+    @include fw.mq("tab") {
+        margin-bottom: 8%;
+  }
 }
 
-.p-post__image {
+.p-post__text {
+    font-size: 16px;
+}
+
+.p-post__image-top {
     width: 100%;
-    height: auto;
+    height: 26vw;
+    object-fit: cover;
+    object-position: 50% 80%;
     padding-bottom: 5%;
+    @include fw.mq("tab") {
+        height: 31vw;
+  }
+    @include fw.mq("sp") {
+        padding-bottom: 8%;
+  }
 }
 
 .p-post__image-small {
@@ -29,18 +41,27 @@
     object-fit: contain;
     
 }
+.p-post__image-big {
+    width: 45%;
+    height: auto;
+    object-fit: contain;
+    @include fw.mq("tab") {
+        width: 80%;
+  }
+    
+} 
 .p-post__heading {
     font-size: clamp(24px,1.8vw,36px);
     color: rgb(60, 42, 16);
     font-family: M+ 1p;
     padding-bottom: 3%;
+    line-height: 2;
     @include fw.mq("tab") {
         font-size: clamp(20px,4.3vw,36px);
         padding-bottom: 5%;
   }
     @include fw.mq("sp") {
         font-size: clamp(20px,7.4vw,28px);
-        padding-bottom: 8%;
   }
 
 }
@@ -63,6 +84,7 @@
     font-family: M+ 1p;
     font-size: clamp(18px,1.4vw,28px);
     padding-bottom: 3%;
+    line-height: 2;
     @include fw.mq("tab") {
         font-size: clamp(16px,3.3vw,28px);
         padding-bottom: 5%;
@@ -98,6 +120,9 @@
 
 .p-post__list {
     padding-bottom: 2%;
+    @include fw.mq("sp") {
+        padding-bottom: 4%;
+  }
 }
 
 .p-post__list-item {

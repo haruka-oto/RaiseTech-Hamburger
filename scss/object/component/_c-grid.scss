@@ -5,7 +5,7 @@
 .c-grid {
   display: grid;
   grid-template-columns: minmax(0,1fr) 20%;
-  grid-template-rows: 217px 1fr 150px;
+  grid-template-rows: minmax(217px,auto) 1fr 150px;
   grid-template-areas:"head side"
    "main side"
    "foot foot";

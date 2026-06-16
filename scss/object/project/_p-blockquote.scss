@@ -1,7 +1,13 @@
+@charset "UTF-8";
+@use "../../foundation/breakpoint" as fw;
+
 .p-blockquote {
     background-color: rgb(245, 245, 245);
     margin-bottom: 5%;
     margin-top: 2%;
+    @include fw.mq("sp") {
+    margin-bottom: 8%;
+  }
 }
 
 .p-blockquote__text {
@@ -11,4 +17,9 @@
 .p-blockquote__link {
     padding: 0 5% 5% 5%;
     display: flex;
+}
+
+.p-blockquote__link a {
+    text-decoration: underline;
+    color: rgb(74, 108, 155);
 }

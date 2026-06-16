@@ -6,12 +6,14 @@
     width: 100%;
     height: auto;
     aspect-ratio: 3/1;
-    background-size: cover;
+    background-size:cover;
     background-position: 50%;
     display: flex;
     align-items: center;
+    padding-left: 20px;
     @include fw.mq("tab") {
         aspect-ratio: 1.6/1;
+        background-size: 140% 140%;
   }
 }
 .p-mainvisual-blog__text {
