@@ -14,12 +14,26 @@
 .p-sidebar-list {
     padding-left: 20%;
 
-    &__child {
-       margin-top: 10%;
-       margin-bottom: 10%;
+    .wp-block-list > li {
+        margin-top: 10%;
+        margin-bottom: 10%;
     }
-}
 
+    .wp-block-list li,
+    .wp-block-list a {
+        font-family: "M+ 1p";
+        font-weight: 400;
+        font-size: clamp(14px, 1vw, 20px);
+        line-height: 100%;
+        color: rgb(112, 112, 112);
+        @include fw.mq("tab") {
+          font-size: clamp(14px,2.5vw,20px);
+        }
+        @include fw.mq("sp") {
+          font-size: clamp(14px,5.3vw,20px);
+        }
+        }
+}
 
     .p-sidebar__black-bg {
     position: fixed;
@@ -68,4 +82,3 @@
     position: fixed;
   }
 
-  

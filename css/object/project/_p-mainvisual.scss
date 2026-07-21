@@ -3,14 +3,14 @@
 
 .p-main-visual__img {
     position: relative;
-    background-image: url(../../../img/mainvisual.png);
+    background-image: url(../../../images/mainvisual.png);
     background-size: cover;
     aspect-ratio: 3/1;
     width: 100%;
     height: auto;
     @include fw.mq("sp") {
     aspect-ratio: 1.3/1;
-    background-image: url(../../../img/mainvisual-sp.png);
+    background-image: url(../../../images/mainvisual-sp.png);
   }
 
 }

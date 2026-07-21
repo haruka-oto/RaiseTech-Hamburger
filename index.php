@@ -1,69 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>ハンバーガーサイト</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="当店のハンバーガメニュー紹介　トップページ">
-        <!-- reset.css ress -->
-        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-        <link rel="stylesheet" href="/scss/common.css">
-        <!--webfonts Roboto-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <script>console.log("ここまで")</script>
-    </head>
+
     <body class="resize">
         <div class="c-grid p-sidebar-container">
-            <div class="p-sidebar__black-bg js-bgToggle"></div>
-            <nav class="l-sidebar js-sidebarToggle l-sidebar__animation">
-                <button class="c-button--close js-buttonToggle-close"></button>
-                <button class="c-button--menu p-sidebar-button">Menu</button>
-                <ul>
-                    <li class="c-menu-list p-sidebar-menutitle u-padding-top">バーガー</li>
-                    <ul class="p-sidebar-list">
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">ベーコンバーガー</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">ハンバーガー</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">チーズバーガー</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">チーズバーガー</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">テリヤキバーガー</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">アボカドバーガー</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">フィッシュバーガー</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">チキンバーガー</a></li>
-                    </ul>
-                    <li class="c-menu-list p-sidebar-menutitle">サイド</li>
-                    <ul class="p-sidebar-list">
-                        <li class="p-sidebar-list__child"><a class="c-menu-list__child" href="###">ポテト</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">サラダ</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">ナゲット</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">コーン</a></li>
-                    </ul>
-                    <li class="c-menu-list p-sidebar-menutitle">ドリンク</li> 
-                    <ul class="p-sidebar-list">
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">コーラ</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">ファンタ</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">オレンジ</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">アップル</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">紅茶（ICE/HOT）</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">コーヒー（ICE/HOT）</a></li>
-                    </ul>               
-                </ul>
-            </nav>
-        <header class="l-header">
-            <div class="p-header-inner">
-                <h1><img class="p-logo" src="./img/pc_logo.png"></h1>
-              <!--検索ボックス-->
-                <div class="p-seach-area">
-                    <form  class="p-search__container">
-                        <button class=p-search__logo type="submit" aria-label="検索"></button>
-                        <input name=seach-box class="p-seach-area__box">
-                    </form>
-                    <button type="submit" type=submit onclick="alert('クリックされました！')"  class="c-button--seach p-seach-area__button">検索</button>
-                </div>
-            </div>
-            <button class="c-button--menu u-tab-only js-buttonToggle">Menu</button>
-        </header>
+        <?php get_sidebar(); ?> <!--siderbar.phpを読み込むテンプレートタグ（インクルードタグ）-->
+        <?php get_header(); ?> <!--header.phpを読み込むテンプレートタグ（インクルードタグ）-->
         <main class="l-main">
             <div class="p-main-visual">
                 <div class="p-main-visual__img">
@@ -105,15 +44,9 @@
                 </div>
             </div>        
         </main>
-        <footer class="l-footer">
-            <p class="p-footer__title u-margin-pc">ショップ情報 | ヒストリー</p>
-            <small class="c-copyright u-color--white">Copyright: RaiseTech</small>
-        </footer>
-
-        </div>
+    <?php get_footer(); ?> <!--footer.phpを読み込むテンプレートタグ（インクルードタグ-->
         
-    <!--jsファイル-->
+    <!--jsファイル
         <script src="js/webfonts.js"></script>
         <script src="js/sidebar.js"></script>
-    </body>
-</html>
+    

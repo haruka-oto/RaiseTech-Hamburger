@@ -634,6 +634,27 @@ img {
 .p-sidebar-list {
   padding-left: 20%;
 }
+.p-sidebar-list ul,
+.p-sidebar-list ol {
+  padding-left: 0;
+  list-style: none;
+}
+/*.p-sidebar-list .wp-block-list > li,*/
+.p-sidebar-list ul > li,
+.p-sidebar-list ol > li {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+/*.p-sidebar-list*/ /*.wp-block-list li,*/
+/*.p-sidebar-list .wp-block-list a,*/
+.p-sidebar-list ul li,
+.p-sidebar-list ol li {
+  font-family: "M+ 1p";
+  font-weight: 400;
+  font-size: clamp(14px, 1vw, 20px);
+  line-height: 100%;
+  color: rgb(112, 112, 112);
+}
 .p-sidebar-list__child {
   margin-top: 10%;
   margin-bottom: 10%;

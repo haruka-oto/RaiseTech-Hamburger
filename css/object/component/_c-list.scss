@@ -16,7 +16,9 @@ color: rgb(112, 112, 112);
   }
 
 }
-.c-menu-list__child {
+
+//WP化に伴いp-sidebar-listへ統合した
+/*.c-menu-list__child{
 font-family: M+ 1p;
 font-weight: 400;
 font-size: clamp(14px,1vw,20px);
@@ -29,4 +31,4 @@ color: rgb(112, 112, 112);
     font-size: clamp(14px,5.3vw,20px);
   }
 
-}
+}*/
