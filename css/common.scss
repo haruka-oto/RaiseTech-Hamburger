@@ -1,6 +1,7 @@
 /*foundation*/
 @use "foundation/base";
 @use "foundation/breakpoint";
+@use "foundation/wordpress";
 /*layout*/
 @use "layout/l-main";
 @use "layout/l-header";
@@ -26,9 +27,6 @@
 @use "object/project/p-panel";
 @use "object/project/p-blog-grid";
 @use "object/project/p-mainvisual-blog";
-@use "object/project/p-post";
-@use "object/project/p-blockquote";
-@use "object/project/p-table";
 @use "object/project/p-sub-content";
 /*object/utility*/
 @use "object/utility/u-color";

@@ -13,12 +13,13 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-height: 400px;
   position: relative;
   z-index: 100;
 }
 
 .p-map-image {
-  background-image: url(../../../images/map-new.jpg);
+  background-image: url(../images/map-new.png);
   background-size: cover;
   position: absolute;
   top: 0;
@@ -32,7 +33,7 @@
 .p-map-shadow {
   width: 55vw;
   height: 100%;
-  background-image: url(../../../images/map-black.png);
+  background-image: url(../images/map-black.png);
   background-size: cover;
   position: absolute;
   top: 0;

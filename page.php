@@ -51,7 +51,7 @@
             </nav>
             <header class="l-header">
                 <div class="p-header-inner">
-                    <h1><img class="p-logo" src="./img/pc_logo.png"></h1>
+                    <h1><img class="p-logo" src="<?php echo esc_url( get_template_directory_uri() . '/images/pc_logo.png' ); ?>" alt="ロゴ"></h1>
               <!--検索ボックス-->
                     <div class="p-seach-area">
                         <form  class="p-search__container">
@@ -82,28 +82,28 @@
                         <p class="p-blockquote__link">出典元：<a href="####">〇〇〇〇〇〇〇</a></p>
                     </div>
                     <div>
-                        <img src="./img/blog.png" alt="ブログ用写真" class="p-post__image-top">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/blog.png' ); ?>" alt="ブログ用写真" class="p-post__image-top">
                     <div class="p-post__container">
-                        <img src="./img/blog.png" alt="ブログ用写真" class="p-post__image-small">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/blog.png' ); ?>" alt="ブログ用写真" class="p-post__image-small">
                         <p class="p-post__text u-margin-post">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                     </div>
                     <div class="p-post__container">
                         <p class="p-post__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                        <img src="./img/blog.png" alt="ブログ用写真" class="p-post__image-small u-margin-post">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/blog.png' ); ?>" alt="ブログ用写真" class="p-post__image-small u-margin-post">
                     </div>
                     <div class="p-post__container">
-                        <img src="./img/blog.png" alt="ブログ用写真" class="p-post__image-big">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/blog.png' ); ?>" alt="ブログ用写真" class="p-post__image-big">
                     </div>
                     <div class="p-blog-grid">
-                        <div class="p-blog-grid__item"><img src="./img/blog.png" alt="ブログ用写真" class="p-blog-grid__image"></div>
-                        <div class="p-blog-grid__item"><img src="./img/blog.png" alt="ブログ用写真" class="p-blog-grid__image"></div>
-                        <div class="p-blog-grid__item"><img src="./img/blog.png" alt="ブログ用写真" class="p-blog-grid__image"></div>
-                        <div class="p-blog-grid__item"><img src="./img/blog.png" alt="ブログ用写真" class="p-blog-grid__image"></div>
-                        <div class="p-blog-grid__item"><img src="./img/blog.png" alt="ブログ用写真" class="p-blog-grid__image"></div>
-                        <div class="p-blog-grid__item"><img src="./img/blog.png" alt="ブログ用写真" class="p-blog-grid__image"></div>
-                        <div class="p-blog-grid__item"><img src="./img/blog.png" alt="ブログ用写真" class="p-blog-grid__image"></div>
-                        <div class="p-blog-grid__item"><img src="./img/blog.png" alt="ブログ用写真" class="p-blog-grid__image"></div>
-                        <div class="p-blog-grid__item"><img src="./img/blog.png" alt="ブログ用写真" class="p-blog-grid__image"></div>
+                        <div class="p-blog-grid__item"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/blog.png' ); ?>" alt="ブログ用写真" class="p-blog-grid__image"></div>
+                        <div class="p-blog-grid__item"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/blog.png' ); ?>" alt="ブログ用写真" class="p-blog-grid__image"></div>
+                        <div class="p-blog-grid__item"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/blog.png' ); ?>" alt="ブログ用写真" class="p-blog-grid__image"></div>
+                        <div class="p-blog-grid__item"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/blog.png' ); ?>" alt="ブログ用写真" class="p-blog-grid__image"></div>
+                        <div class="p-blog-grid__item"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/blog.png' ); ?>" alt="ブログ用写真" class="p-blog-grid__image"></div>
+                        <div class="p-blog-grid__item"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/blog.png' ); ?>" alt="ブログ用写真" class="p-blog-grid__image"></div>
+                        <div class="p-blog-grid__item"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/blog.png' ); ?>" alt="ブログ用写真" class="p-blog-grid__image"></div>
+                        <div class="p-blog-grid__item"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/blog.png' ); ?>" alt="ブログ用写真" class="p-blog-grid__image"></div>
+                        <div class="p-blog-grid__item"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/blog.png' ); ?>" alt="ブログ用写真" class="p-blog-grid__image"></div>
                     </div>
                     <div class="p-post__list-container">
                         <ul class="p-post__list">

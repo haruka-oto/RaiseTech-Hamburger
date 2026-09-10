@@ -7,7 +7,7 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-        <div class="c-grid p-sidebar-container">
+        
         <header class="l-header">
             <div class="p-header-inner">
                 <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="p-logo" src="<?php echo esc_url( get_template_directory_uri() . '/images/pc_logo.png' ); ?>" alt="ロゴ"<?php bloginfo( 'name' ); ?>></a>

@@ -51,7 +51,7 @@
             </nav>
             <header class="l-header">
                 <div class="p-header-inner">
-                <h1><img class="p-logo" src="./img/pc_logo.png"></h1>
+                <h1><img class="p-logo" src="<?php echo esc_url( get_template_directory_uri() . '/images/pc_logo.png' ); ?>" alt="ロゴ"></h1>
               <!--検索ボックス-->
                 <div class="p-seach-area">
                         <form  class="p-search__container">
@@ -76,7 +76,7 @@
                 </div>
                 <div class="p-panel-container">
                     <article class="p-panel">
-                        <img src="./img/arcchive.png" alt="チーズバーガー" class="p-panel__image">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/arcchive.png' ); ?>" alt="チーズバーガー" class="p-panel__image">
                         <div class="p-panel__inner">
                             <h4 class="p-panel__title">チーズバーガー</h4>
                             <h5 class="p-panel__subtitle">小見出しが入ります</h5>
@@ -87,7 +87,7 @@
                         </div>
                     </article>
                     <article class="p-panel">
-                        <img src="./img/arcchive.png" alt="チーズバーガー" class="p-panel__image">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/arcchive.png' ); ?>" alt="チーズバーガー" class="p-panel__image">
                         <div class="p-panel__inner">
                             <h4 class="p-panel__title">ダブルチーズバーガー</h4>
                             <h5 class="p-panel__subtitle">小見出しが入ります</h5>
@@ -96,7 +96,7 @@
                         </div>
                     </article>
                     <article class="p-panel">
-                        <img src="./img/arcchive.png" alt="チーズバーガー" class="p-panel__image">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/arcchive.png' ); ?>" alt="チーズバーガー" class="p-panel__image">
                         <div class="p-panel__inner">
                             <h4 class="p-panel__title">スペシャルチーズバーガー</h4>
                             <h5 class="p-panel__subtitle">小見出しが入ります</h5>

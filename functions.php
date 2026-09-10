@@ -2,6 +2,51 @@
     //テーマサポート
     add_theme_support( 'menus' );
     add_theme_support( 'title-tag' );
+    add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'wp-block-styles' );
+    add_theme_support( 'appearance-tools' );
+    add_theme_support( 'custom-spacing' );
+    add_theme_support(
+        'editor-color-palette',
+        array(
+            array(
+                'name'  => 'ホワイトスモーク',
+                'slug'  => 'white-smoke',
+                'color' => '#f5f5f5',
+            ),
+            array(
+                'name'  => 'クリーム',
+                'slug'  => 'cream',
+                'color' => '#FFFDFA',
+            ),
+            array(
+                'name'  => 'ブラウン',
+                'slug'  => 'brown',
+                'color' => '#3C2A10',
+            ),
+            array(
+                'name'  => 'ブルー',
+                'slug'  => 'blue',
+                'color' => '#4A6C9B',
+            ),
+            array(
+                'name'  => 'グレージュ',
+                'slug'  => 'gray-beige',
+                'color' => '#DED8D3',
+            ),
+            array(
+                'name'  => 'ライトベージュ',
+                'slug'  => 'light-beige',
+                'color' => '#F2EDE9',
+            ),
+            array(
+                'name'  => 'ホワイト',
+                'slug'  => 'white',
+                'color' => '#FFFFFF',
+            ),
+        )
+    );
+    add_image_size( 'p-mainvisual-blog', 1200, 600, true );
 
 function hamburger_title( $title ) {
     if ( is_front_page() && is_home() ) { 
@@ -18,9 +63,8 @@ function hamburger_style() {
     wp_enqueue_script( 'webfonts', get_template_directory_uri() . '/js/webfonts.js', array(), null, true );
     wp_enqueue_script( 'sidebar', get_template_directory_uri() . '/js/sidebar.js', array(), null, true );
     wp_enqueue_style( 'reset-style', '//unpkg.com/ress/dist/ress.min.css', array(), null );
-    wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', array(), null );
+    wp_enqueue_style( 'style', get_template_directory_uri() . '/css/common.css', array(), filemtime( get_template_directory() . '/css/common.css' ) );
 }
-
 add_action( 'wp_enqueue_scripts', 'hamburger_style' );
 
 //サイドバーにウィジェット機能を追加する
