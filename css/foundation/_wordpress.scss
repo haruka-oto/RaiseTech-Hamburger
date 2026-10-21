@@ -140,3 +140,101 @@
     width: 100%;
   }
 }
+
+//カテゴリーページ画像
+.attachment-medium {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position:25% 50%;
+    @include fw.mq("sp") {
+    width: 100%;
+  }
+}
+
+//サイドバーウィジェットのスタイリング
+.menu-item {
+    padding-left: 20%;
+
+     > a {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        font-family: "M+ 1p";
+        font-weight: 400;
+        font-size: clamp(14px, 1vw, 20px);
+        line-height: 100%;
+        color: rgb(112, 112, 112);
+        @include fw.mq("tab") {
+          font-size: clamp(14px,2.5vw,20px);
+        }
+        @include fw.mq("sp") {
+          font-size: clamp(14px,5.3vw,20px);
+        }
+        }
+    }
+
+//ページネーション
+ul.page-numbers {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    font-family: Roboto;
+    font-weight: bold;
+    width: 95%;
+    padding-left: 5%;
+    @include fw.mq("sp") {
+        display: none;
+  }
+}
+
+a.page-numbers:not(.prev):not(.next),
+span.page-numbers.current {
+    display: block;
+    border: 1px solid rgb(112, 112, 112);
+    text-align: center;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    color: rgb(112, 112, 112);
+    background-color: white;
+    @include fw.mq("tab") {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
+li > a.page-numbers.prev {
+    display: block;
+    text-align: center;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    color: rgb(112, 112, 112);
+    background-color: white;
+}
+
+li > a.page-numbers.next {
+    display: block;
+    text-align: center;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    color: rgb(112, 112, 112);
+    background-color: white;
+    @include fw.mq("tab") {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+ul.page-numbers li > span.current {
+    background-color: rgb(60, 43, 28);
+    color: white;
+}
+

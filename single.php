@@ -1,4 +1,3 @@
-<?php if ( is_single() ) { echo '<p>single.php is active</p>'; } ?>
     <body>
         <div class="c-grid p-sidebar-container">
             <?php get_sidebar(); ?> <!--siderbar.phpを読み込むテンプレートタグ（インクルードタグ）-->

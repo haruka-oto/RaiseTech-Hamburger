@@ -1,6 +1,6 @@
 <?php
-get_sidebar();
 get_header();
+get_sidebar();
 ?>
 
 <main class="l-main">

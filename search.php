@@ -1,163 +1,101 @@
-<!DOCTYPE html>
-<html lang="ja">
-     <head>
-        <meta charset="UTF-8">
-        <title>ハンバーガーサイト</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="ハンバーガーサイトの商品紹介ページ">
-        <!-- reset.css ress -->
-        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-        <link rel="stylesheet" href="/scss/common.css">
-        <!--webfonts Roboto-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="c-grid p-sidebar-container">
-            <div class="p-sidebar__black-bg js-bgToggle"></div>
-            <nav class="l-sidebar js-sidebarToggle">
-                <button class="c-button--close js-buttonToggle-close"></button>
-                <button class="c-button--menu p-sidebar-button">Menu</button>
-                <ul>
-                    <li class="c-menu-list p-sidebar-menutitle u-padding-top">バーガー</li>
-                    <ul class="p-sidebar-list">
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">ベーコンバーガー</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">ハンバーガー</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">チーズバーガー</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">チーズバーガー</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">テリヤキバーガー</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">アボカドバーガー</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">フィッシュバーガー</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">チキンバーガー</a></li>
-                    </ul>
-                    <li class="c-menu-list p-sidebar-menutitle">サイド</li>
-                    <ul class="p-sidebar-list">
-                        <li class="p-sidebar-list__child"><a class="c-menu-list__child" href="###">ポテト</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">サラダ</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">ナゲット</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">コーン</a></li>
-                    </ul>
-                    <li class="c-menu-list p-sidebar-menutitle">ドリンク</li> 
-                    <ul class="p-sidebar-list">
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">コーラ</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">ファンタ</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">オレンジ</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">アップル</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">紅茶（ICE/HOT）</a></li>
-                        <li><a class="c-menu-list__child p-sidebar-list__child" href="###">コーヒー（ICE/HOT）</a></li>
-                    </ul>               
-                </ul>
-            </nav>
-            <header class="l-header">
-                <div class="p-header-inner">
-                    <h1><img class="p-logo" src="<?php echo esc_url( get_template_directory_uri() . '/images/pc_logo.png' ); ?>" alt="ロゴ"></h1>
-              <!--検索ボックス-->
-                    <div class="p-seach-area">
-                        <form  class="p-search__container">
-                            <button class=p-search__logo type="submit" aria-label="検索"></button>
-                            <input name=seach-box class="p-seach-area__box">
-                        </form>
-                        <button type="submit" type=submit onclick="alert('クリックされました！')"  class="c-button--seach p-seach-area__button">検索</button>
-                    </div>
+<div class="c-grid p-sidebar-container">
+    <?php get_header(); ?>
+    <?php get_sidebar(); ?>
+        <main class="l-main">
+        <?php if ( have_posts() ) : ?>
+            <div class="p-mainvisual-sub">
+                <div class="p-mainvisual-sub__inner">
+                    <h2 class="p-mainvisual-sub__text">Search:</h2>
+                    <?php if ( is_search() ) : ?> 
+                        <p class="p-mainvisual-sub__textSmall">
+                        <?php echo esc_html( get_search_query(false) ); ?>
+                        </p>
+                    <?php endif; ?>
                 </div>
-                <button class="c-button--menu u-tab-only js-buttonToggle">Menu</button>
-            </header>
-            <main class="l-main">
-                <div class="p-mainvisual-sub">
-                    <div class="p-mainvisual-sub__inner">
-                        <h2 class="p-mainvisual-sub__text">Search</h2>
-                        <p class="p-mainvisual-sub__textSmall">チーズバーガー</p>
-                    </div>
-                </div>
-                <div class="p-heading">
-                    <h3 class="p-heading__title">小見出しが入ります</h3>
-                    <p class="p-heading__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                </div>
-                <div class="p-panel-container">
-                    <article class="p-panel">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/arcchive.png' ); ?>" alt="チーズバーガー" class="p-panel__image">
-                        <div class="p-panel__inner">
-                            <h4 class="p-panel__title">見出しが入ります</h4>
-                            <h5 class="p-panel__subtitle">小見出しが入ります</h5>
-                            <p class="p-panel__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                        <div>
-                        <button class="c-button--panel p-panel__button" type="button">詳しく見る</button>
-                        </div> 
-                    </div>
-                    </article>
-                    <article class="p-panel">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/arcchive.png' ); ?>" alt="チーズバーガー" class="p-panel__image">
-                        <div class="p-panel__inner">
-                            <h4 class="p-panel__title">見出しが入ります</h4>
-                            <h5 class="p-panel__subtitle">小見出しが入ります</h5>
-                            <p class="p-panel__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                            <button class="c-button--panel p-panel__button" type="button">詳しく見る</button>
-                        </div>
-                    </article>
-                    <article class="p-panel">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/arcchive.png' ); ?>" alt="チーズバーガー" class="p-panel__image">
-                        <div class="p-panel__inner">
-                            <h4 class="p-panel__title">見出しが入ります</h4>
-                            <h5 class="p-panel__subtitle">小見出しが入ります</h5>
-                            <p class="p-panel__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                            <button class="c-button--panel p-panel__button" type="button">詳しく見る</button>
-                        </div>
-                    </article>
-                    <article class="p-panel">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/arcchive.png' ); ?>" alt="チーズバーガー" class="p-panel__image">
-                        <div class="p-panel__inner">
-                            <h4 class="p-panel__title">見出しが入ります</h4>
-                            <h5 class="p-panel__subtitle">小見出しが入ります</h5>
-                            <p class="p-panel__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                            <button class="c-button--panel p-panel__button" type="button">詳しく見る</button>
-                        </div>
-                    </article>
-                    <article class="p-panel">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/arcchive.png' ); ?>" alt="チーズバーガー" class="p-panel__image">
-                        <div class="p-panel__inner">
-                            <h4 class="p-panel__title">見出しが入ります</h4>
-                            <h5 class="p-panel__subtitle">小見出しが入ります</h5>
-                            <p class="p-panel__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                            <button class="c-button--panel p-panel__button" type="button">詳しく見る</button>
-                        </div>
-                    </article>
-                </div>
-                <!--pagenation-->
-                <div class="p-pagenation-container">
-                    <ul class="p-pagenation">
-                        <li class="p-pagenation__text">page1/10</li>
-                        <li class="p-pagenation__prev">〈〈</li>
-                        <li class="p-pagenation__number u-color--click"><a href="###"></a>1</li>
-                        <li class="p-pagenation__number"><a href="###"></a>2</li>
-                        <li class="p-pagenation__number"><a href="###"></a>3</li>
-                        <li class="p-pagenation__number"><a href="###"></a>4</li>
-                        <li class="p-pagenation__number"><a href="###"></a>5</li>
-                        <li class="p-pagenation__number"><a href="###"></a>6</li>
-                        <li class="p-pagenation__number"><a href="###"></a>7</li>
-                        <li class="p-pagenation__number"><a href="###"></a>8</li>
-                        <li class="p-pagenation__number"><a href="###"></a>9</li>
-                        <li class="p-pagenation__next">〉〉</li>
-                    </ul>
-                    <ul class="p-pagenation--sp">
-                        <div class="p-pagenation--sp__inner">
-                            <li>〈〈</li>
-                            <li class=u-margin-pagenation>前へ</li>
-                        </div>
-                        <div class="p-pagenation--sp__inner">
-                            <li>次へ</li>
-                            <li class="u-margin-pagenation">〉〉</li>
-                        </div>
-                    </ul>
-                </div>
-            </main>
-            <footer class="l-footer">
-                <p class="p-footer__title u-margin-pc">ショップ情報 | ヒストリー</p>
-                <small class="c-copyright u-color--white">Copyright: RaiseTech</small>
-            </footer>
+            </div>
+            <div class="p-heading">
+                <h3 class="p-heading__title">小見出しが入ります</h3>
+                <p class="p-heading__text">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+            </div>
 
+            <?php while ( have_posts() ) : the_post(); ?>
+                <article class="p-panel">
+                    <a href="<?php the_permalink(); ?>" class="p-panel__image">
+                        <?php the_post_thumbnail('medium'); ?>
+                    </a>
+                    <div class="p-panel__inner">
+                        <h4 class="p-panel__title"><?php the_title(); ?></h4>
+                        <?php
+                        $h2_text = '';
+
+                        foreach ( parse_blocks( get_the_content() ) as $block ) {
+                            if (
+                                ( $block['blockName'] ?? '' ) === 'core/heading'
+                                && (int) ( $block['attrs']['level'] ?? 2 ) === 2
+                            ) {
+                                $h2_text = wp_strip_all_tags( render_block( $block ) );
+                                break;
+                            }
+                        }
+                        ?>
+                        <?php if ( $h2_text !== '' ) : ?>
+                            <h5 class="p-panel__subtitle"><?php echo esc_html( $h2_text ); ?></h5>
+                        <?php endif; ?>
+                        <p class="p-panel__text"><?php echo esc_html( get_the_excerpt() ); ?></p>
+                        <div>
+                            <a href="<?php the_permalink(); ?>" class="p-panel__button">
+                               <button class=c-button--panel> 詳しく見る </button>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            <?php endwhile; ?>
+
+        <div class="p-pagenation-container">
+                <?php
+                global $wp_query;
+
+                $current_page = max( 1, (int) get_query_var( 'paged' ) );
+                $total_pages  = max( 1, (int) $wp_query->max_num_pages );
+                ?>
+
+                <p class="p-pagenation__count">
+                page<?php echo esc_html( $current_page . '/' . $total_pages ); ?>
+                </p>
+                <?php the_posts_pagination( array(
+                    'mid_size'           => 1,
+                    'prev_text'          => '〈〈 ',
+                    'next_text'          => '〉〉',
+                    'screen_reader_text' => 'ページネーション',
+                    'type'               => 'list',
+                    'end_size'           => 9,
+                    'aria_current'       => 'page',
+                ) ); ?>
+
+                <ul class="p-pagenation--sp">
+                    <?php $previous_page_url = get_previous_posts_page_link(); ?>
+                    <?php if ( $current_page > 1 ) : ?>
+                        <li class="p-pagenation--sp__inner">
+                            <a href="<?php echo esc_url( $previous_page_url ); ?>" aria-label="前のページ">
+                                <span aria-hidden="true">〈〈</span>
+                                <span class="u-margin-pagenation">前へ</span>
+                            </a>
+                        </li>
+                    <?php endif; ?>
+                    <?php $next_page_url = get_next_posts_page_link(); ?>
+                    <?php if ( $current_page < $total_pages ) : ?>
+                        <li class="p-pagenation--sp__inner u-margin-pagination--lastpage">
+                            <a href="<?php echo esc_url( $next_page_url ); ?>" aria-label="次のページ">
+                                <span>次へ</span>
+                                <span class="u-margin-pagenation" aria-hidden="true">〉〉</span>
+                            </a>
+                        </li>
+                    <?php endif; ?>
+                </ul>
         </div>
-        <script src="js/webfonts.js"></script>
-        <script src="js/sidebar.js"></script>
-    </body>
-</html>
+        <?php else : ?>
+            <p>投稿はありません。</p>
+        <?php endif; ?>
+    </main>
+    <?php get_footer(); ?>
+</div>

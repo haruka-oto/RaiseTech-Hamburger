@@ -64,6 +64,7 @@ color: rgb(112, 112, 112);
   font-size: clamp(12px,0.83vw,16px);
   width: 15.2vw;
   height: 4vw;
+  line-height: 2.5;
   @include fw.mq("tab") {
     font-size: clamp(12px,1.9vw,16px);
     width: 19.5vw;

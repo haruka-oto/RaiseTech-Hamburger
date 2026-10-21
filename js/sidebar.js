@@ -1,24 +1,23 @@
 let nav = document.querySelector('.js-sidebarToggle')
-let btn = document.querySelector('.js-buttonToggle')
+let buttons = document.querySelectorAll('.js-buttonToggle')
 let bg = document.querySelector('.js-bgToggle')
 let btnclose = document.querySelector('.js-buttonToggle-close')
 let fixed = document.body;
+let pcBreakpoint = window.matchMedia('(min-width: 835px)');
 
+function toggleSidebar() {
+  if (pcBreakpoint.matches) return;
 
-btn.addEventListener('click', function() {
-  bg.classList.toggle('is-open');
-  nav.classList.toggle('is-active');
-  console.log('ここまで');
-  fixed.classList.toggle('is-fixed');
-});
-
-btnclose.addEventListener('click',function(){
   bg.classList.toggle('is-open');
   nav.classList.toggle('is-active');
   fixed.classList.toggle('is-fixed');
+}
+
+buttons.forEach(function(button) {
+  button.addEventListener('click', toggleSidebar);
 });
 
-let pcBreakpoint = window.matchMedia('(min-width: 834px)');
+btnclose.addEventListener('click', toggleSidebar);
 
 function handleTabletMobileChange(e) {
   if(e.matches) {

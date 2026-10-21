@@ -54,7 +54,8 @@
   
 
 
-.is-active {
+@include fw.mq("tab") {
+    .is-active {
      width: 40vw;
      z-index: 2000;
      right: 0;
@@ -71,3 +72,4 @@
 }
       
     }
+}

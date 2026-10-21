@@ -1,0 +1,53 @@
+{
+    "version": 3,
+    "settings": {
+        "appearanceTools": true,
+        "layout": {
+            "contentSize": "1200px",
+            "wideSize": "1440px"
+        },
+        "spacing": {
+            "units": ["px", "em", "rem", "%", "vw", "vh"]
+        },
+        "color": {
+            "defaultPalette": false,
+            "palette": [
+                {
+                    "name": "ホワイトスモーク",
+                    "slug": "white-smoke",
+                    "color": "#f5f5f5"
+                },
+                {
+                    "name": "クリーム",
+                    "slug": "cream",
+                    "color": "#FFFDFA"
+                },
+                {
+                    "name": "ブラウン",
+                    "slug": "brown",
+                    "color": "#3C2A10"
+                },
+                {
+                    "name": "ブルー",
+                    "slug": "blue",
+                    "color": "#4A6C9B"
+                },
+                {
+                    "name": "グレージュ",
+                    "slug": "gray-beige",
+                    "color": "#DED8D3"
+                },
+                {
+                    "name": "ライトベージュ",
+                    "slug": "light-beige",
+                    "color": "#F2EDE9"
+                },
+                {
+                    "name": "ホワイト",
+                    "slug": "white",
+                    "color": "#FFFFFF"
+                }
+            ]
+        }
+    }
+}

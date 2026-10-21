@@ -194,6 +194,113 @@ img {
   }
 }
 
+.attachment-medium {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: 25% 50%;
+}
+@media screen and (max-width:430px) {
+  .attachment-medium {
+    width: 100%;
+  }
+}
+
+.menu-item {
+  padding-left: 20%;
+}
+.menu-item > a {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-family: "M+ 1p";
+  font-weight: 400;
+  font-size: clamp(14px, 1vw, 20px);
+  line-height: 100%;
+  color: rgb(112, 112, 112);
+}
+@media screen and (max-width:834px) {
+  .menu-item > a {
+    font-size: clamp(14px, 2.5vw, 20px);
+  }
+}
+@media screen and (max-width:430px) {
+  .menu-item > a {
+    font-size: clamp(14px, 5.3vw, 20px);
+  }
+}
+
+ul.page-numbers {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  font-family: Roboto;
+  font-weight: bold;
+  width: 95%;
+  padding-left: 5%;
+}
+@media screen and (max-width:430px) {
+  ul.page-numbers {
+    display: none;
+  }
+}
+
+a.page-numbers:not(.prev):not(.next),
+span.page-numbers.current {
+  display: block;
+  border: 1px solid rgb(112, 112, 112);
+  text-align: center;
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  color: rgb(112, 112, 112);
+  background-color: white;
+}
+@media screen and (max-width:834px) {
+  a.page-numbers:not(.prev):not(.next),
+  span.page-numbers.current {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+li > a.page-numbers.prev {
+  display: block;
+  text-align: center;
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  color: rgb(112, 112, 112);
+  background-color: white;
+}
+
+li > a.page-numbers.next {
+  display: block;
+  text-align: center;
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  color: rgb(112, 112, 112);
+  background-color: white;
+}
+@media screen and (max-width:834px) {
+  li > a.page-numbers.next {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+ul.page-numbers li > span.current {
+  background-color: rgb(60, 43, 28);
+  color: white;
+}
+
 /*layout*/
 .l-main {
   grid-area: main;
@@ -289,25 +396,26 @@ img {
   }
 }
 
-.is-active {
-  width: 40vw;
-  z-index: 2000;
-  right: 0;
-  transform: translateX(0);
-  transition-delay: 200ms;
-  transition-duration: 400ms;
-  transition-property: all;
-  overflow-y: scroll;
-  overscroll-behavior: contain;
-  height: 100vh;
-  opacity: 1;
+@media screen and (max-width:834px) {
+  .is-active {
+    width: 40vw;
+    z-index: 2000;
+    right: 0;
+    transform: translateX(0);
+    transition-delay: 200ms;
+    transition-duration: 400ms;
+    transition-property: all;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    height: 100vh;
+    opacity: 1;
+  }
 }
-@media screen and (max-width:430px) {
+@media screen and (max-width:834px) and (max-width:430px) {
   .is-active {
     width: 87.4vw;
   }
 }
-
 .l-footer {
   grid-area: foot;
   width: 100%;
@@ -455,6 +563,7 @@ color: rgb(112, 112, 112);
   font-size: clamp(12px, 0.83vw, 16px);
   width: 15.2vw;
   height: 4vw;
+  line-height: 2.5;
 }
 @media screen and (max-width:834px) {
   .c-button--panel {
@@ -766,34 +875,6 @@ color: rgb(112, 112, 112);
   padding-bottom: 5%;
 }
 
-.p-sidebar-list {
-  padding-left: 20%;
-}
-.p-sidebar-list .wp-block-list > li {
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
-.p-sidebar-list .wp-block-list li,
-.p-sidebar-list .wp-block-list a {
-  font-family: "M+ 1p";
-  font-weight: 400;
-  font-size: clamp(14px, 1vw, 20px);
-  line-height: 100%;
-  color: rgb(112, 112, 112);
-}
-@media screen and (max-width:834px) {
-  .p-sidebar-list .wp-block-list li,
-  .p-sidebar-list .wp-block-list a {
-    font-size: clamp(14px, 2.5vw, 20px);
-  }
-}
-@media screen and (max-width:430px) {
-  .p-sidebar-list .wp-block-list li,
-  .p-sidebar-list .wp-block-list a {
-    font-size: clamp(14px, 5.3vw, 20px);
-  }
-}
-
 .p-sidebar__black-bg {
   position: fixed;
   top: 0;
@@ -962,39 +1043,11 @@ color: rgb(112, 112, 112);
   }
 }
 
-.p-pagenation {
+.p-pagenation-container {
   display: flex;
-  align-items: center;
-  position: relative;
   justify-content: center;
-  font-family: Roboto;
-  color: rgb(112, 112, 112);
-  font-size: bold;
   margin-top: 80px;
   margin-bottom: 30px;
-  width: 95%;
-  padding-left: 5%;
-}
-@media screen and (max-width:430px) {
-  .p-pagenation {
-    display: none;
-  }
-}
-
-.p-pagenation__number {
-  border: 1px solid rgb(112, 112, 112);
-  text-align: center;
-  margin-left: 10px;
-  width: 25px;
-  height: 25px;
-  line-height: 25px;
-}
-@media screen and (max-width:834px) {
-  .p-pagenation__number {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-  }
 }
 
 .p-pagenation__text {
@@ -1024,17 +1077,36 @@ color: rgb(112, 112, 112);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: rgb(112, 112, 112);
-    font-family: M1p;
     margin-top: 40px;
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 30px;
+    width: 100%;
   }
 }
 
 .p-pagenation--sp__inner {
   display: flex;
+}
+
+.p-pagenation--sp__inner a {
+  display: flex;
+  align-items: center;
+  color: rgb(112, 112, 112);
+  font-family: M1p;
+}
+
+.p-pagenation__count {
+  color: rgb(112, 112, 112);
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Roboto";
+  line-height: 2;
+}
+@media screen and (max-width:430px) {
+  .p-pagenation__count {
+    display: none;
+  }
 }
 
 .p-mainvisual-sub {
@@ -1133,6 +1205,7 @@ color: rgb(112, 112, 112);
 
 .p-panel {
   display: flex;
+  height: fit-content;
   margin-bottom: 15px;
 }
 @media screen and (max-width:430px) {
@@ -1158,14 +1231,21 @@ color: rgb(112, 112, 112);
 .p-panel__image {
   width: 50%;
   height: auto;
-  aspect-ratio: 1/1;
   object-fit: cover;
-  object-position: 25% 50%;
+  object-position: center;
+  aspect-ratio: 4/3;
+  overflow: hidden;
 }
 @media screen and (max-width:430px) {
   .p-panel__image {
     width: 100%;
   }
+}
+
+.p-panel > a.p-panel__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .p-panel__title {
@@ -1328,6 +1408,10 @@ color: rgb(112, 112, 112);
 
 .u-margin-post {
   margin-left: 3%;
+}
+
+.u-margin-pagination--lastpage {
+  margin-left: auto;
 }
 
 .u-tab-only {

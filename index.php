@@ -11,7 +11,14 @@
             </div>
             <div class="p-card">
                 <article class="p-card--takeout">
-                    <h2 class="p-card__header-title">Take Out</h2>
+                    <?php $category = get_category_by_slug( 'take-out' ); ?>
+                    <?php if ( $category ) : ?>
+                        <h2>
+                            <a class="p-card__header-title" href="<?php echo esc_url( get_category_link( $category->term_id ) ); ?>">
+                                Take Out
+                            </a>
+                        </h2>
+                    <?php endif; ?>
                     <div class="p-card__article u-margin-article">
                         <h3 class="p-card__title">Take OUT</h3>
                         <P class="p-card__text">当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています</P>
@@ -22,7 +29,14 @@
                     </div>
                 </article>
                 <article class="p-card--eatin">
-                    <h2 class="p-card__header-title">Eat In</h2>
+                    <?php $category = get_category_by_slug( 'eat-in' ); ?>
+                    <?php if ( $category ) : ?>
+                        <h2>
+                            <a class="p-card__header-title" href="<?php echo esc_url( get_category_link( $category->term_id ) ); ?>">
+                                Eat In
+                            </a>
+                        </h2>
+                    <?php endif; ?>
                     <div class="p-card__article u-margin-article">
                         <h3 class="p-card__title">Eat In</h3>
                         <p class="p-card__text">当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです</p>
