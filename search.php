@@ -8,7 +8,7 @@
                     <h2 class="p-mainvisual-sub__text">Search:</h2>
                     <?php if ( is_search() ) : ?> 
                         <p class="p-mainvisual-sub__textSmall">
-                        <?php echo esc_html( get_search_query(false) ); ?>
+                            <?php echo esc_html( get_search_query(false) ); ?>
                         </p>
                     <?php endif; ?>
                 </div>
@@ -52,46 +52,46 @@
             <?php endwhile; ?>
 
         <div class="p-pagenation-container">
-                <?php
-                global $wp_query;
+            <?php
+            global $wp_query;
 
-                $current_page = max( 1, (int) get_query_var( 'paged' ) );
-                $total_pages  = max( 1, (int) $wp_query->max_num_pages );
-                ?>
+            $current_page = max( 1, (int) get_query_var( 'paged' ) );
+            $total_pages  = max( 1, (int) $wp_query->max_num_pages );
+            ?>
 
-                <p class="p-pagenation__count">
+            <p class="p-pagenation__count">
                 page<?php echo esc_html( $current_page . '/' . $total_pages ); ?>
-                </p>
-                <?php the_posts_pagination( array(
-                    'mid_size'           => 1,
-                    'prev_text'          => '〈〈 ',
-                    'next_text'          => '〉〉',
-                    'screen_reader_text' => 'ページネーション',
-                    'type'               => 'list',
-                    'end_size'           => 9,
-                    'aria_current'       => 'page',
-                ) ); ?>
+            </p>
+            <?php the_posts_pagination( array(
+                'mid_size'           => 1,
+                'prev_text'          => '〈〈 ',
+                'next_text'          => '〉〉',
+                'screen_reader_text' => 'ページネーション',
+                'type'               => 'list',
+                'end_size'           => 9,
+                'aria_current'       => 'page',
+            ) ); ?>
 
-                <ul class="p-pagenation--sp">
-                    <?php $previous_page_url = get_previous_posts_page_link(); ?>
-                    <?php if ( $current_page > 1 ) : ?>
-                        <li class="p-pagenation--sp__inner">
-                            <a href="<?php echo esc_url( $previous_page_url ); ?>" aria-label="前のページ">
-                                <span aria-hidden="true">〈〈</span>
-                                <span class="u-margin-pagenation">前へ</span>
-                            </a>
-                        </li>
-                    <?php endif; ?>
-                    <?php $next_page_url = get_next_posts_page_link(); ?>
-                    <?php if ( $current_page < $total_pages ) : ?>
-                        <li class="p-pagenation--sp__inner u-margin-pagination--lastpage">
-                            <a href="<?php echo esc_url( $next_page_url ); ?>" aria-label="次のページ">
-                                <span>次へ</span>
-                                <span class="u-margin-pagenation" aria-hidden="true">〉〉</span>
-                            </a>
-                        </li>
-                    <?php endif; ?>
-                </ul>
+            <ul class="p-pagenation--sp">
+                <?php $previous_page_url = get_previous_posts_page_link(); ?>
+                <?php if ( $current_page > 1 ) : ?>
+                    <li class="p-pagenation--sp__inner">
+                        <a href="<?php echo esc_url( $previous_page_url ); ?>" aria-label="前のページ">
+                            <span aria-hidden="true">〈〈</span>
+                            <span class="u-margin-pagenation">前へ</span>
+                        </a>
+                    </li>
+                <?php endif; ?>
+                <?php $next_page_url = get_next_posts_page_link(); ?>
+                <?php if ( $current_page < $total_pages ) : ?>
+                    <li class="p-pagenation--sp__inner u-margin-pagination--lastpage">
+                        <a href="<?php echo esc_url( $next_page_url ); ?>" aria-label="次のページ">
+                            <span>次へ</span>
+                            <span class="u-margin-pagenation" aria-hidden="true">〉〉</span>
+                        </a>
+                    </li>
+                <?php endif; ?>
+            </ul>
         </div>
         <?php else : ?>
             <p>投稿はありません。</p>

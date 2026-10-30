@@ -9,7 +9,8 @@
    z-index: 2000;
    
   @include fw.mq("tab") {
-    position: absolute;
+    grid-area: auto;
+    position: fixed;
     opacity: 0;
     right: 20vw;
     z-index: -2000;
@@ -18,7 +19,7 @@
     
     @include fw.mq("sp") {
     width: 15vw;
-    position: absolute;
+    position: fixed;
     right: 40vw;
     z-index: -2000;
     
@@ -27,26 +28,18 @@
 
 .l-sidebar__animation {
     @include fw.mq("tab") {
-    position: absolute;
-    transform:translateX(100%);
-    transition-delay: 100ms;
-    transition-duration:400ms;
-    transition-property:all;
+    position: fixed;
+    transform: translateX(100%);
+    transition: transform 400ms ease, opacity 400ms ease;
     opacity: 0;
-    right: 20vw;
-    z-index: -2000;
-    width: 15vh;
+    right: 0;
+    z-index: 2000;
+    width: 40vw;
+    pointer-events: none;
 }
     
     @include fw.mq("sp") {
-    width: 15vw;
-    position: absolute;
-    transform:translateX(100%);
-    transition-delay: 100ms;
-    transition-duration:400ms;
-    transition-property:all;
-    right: 40vw;
-    z-index: -2000;
+    width: 87.4vw;
 
 }
 
@@ -56,20 +49,33 @@
 
 @include fw.mq("tab") {
     .is-active {
-     width: 40vw;
      z-index: 2000;
-     right: 0;
      transform: translateX(0);
-     transition-delay: 200ms;
-     transition-duration:400ms;
-     transition-property:all;
+     pointer-events: auto;
      overflow-y: scroll;
      overscroll-behavior: contain;
      height:100vh;
      opacity: 1;
-      @include fw.mq("sp") {
-     width: 87.4vw;
-}
       
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .admin-bar .l-sidebar {
+        top: 32px;
+    }
+
+    .admin-bar .l-sidebar.is-active {
+        height: calc(100vh - 32px);
+    }
+}
+
+@media screen and (max-width: 782px) {
+    .admin-bar .l-sidebar {
+        top: 46px;
+    }
+
+    .admin-bar .l-sidebar.is-active {
+        height: calc(100vh - 46px);
     }
 }

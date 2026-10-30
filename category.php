@@ -8,9 +8,7 @@
                     <h2 class="p-mainvisual-sub__text">Menu:</h2>
                     <?php
                     if ( is_category() ) {
-                        echo '<p class="p-mainvisual-sub__textSmall">' . esc_html( single_cat_title('', false) ) . '</p>';
-
-                       
+                        echo '<p class="p-mainvisual-sub__textSmall">' . esc_html( single_cat_title('', false) ) . '</p>';   
                     } else {
                         the_archive_title('<h2 class="p-mainvisual-sub__text">', '</h2>');
                     }
@@ -48,7 +46,7 @@
                         <p class="p-panel__text"><?php echo esc_html( get_the_excerpt() ); ?></p>
                         <div>
                             <a href="<?php the_permalink(); ?>" class="p-panel__button">
-                               <button class=c-button--panel> 詳しく見る </button>
+                                <button class=c-button--panel> 詳しく見る </button>
                             </a>
                         </div>
                     </div>
@@ -64,7 +62,7 @@
                 ?>
 
                 <p class="p-pagenation__count">
-                page<?php echo esc_html( $current_page . '/' . $total_pages ); ?>
+                    page<?php echo esc_html( $current_page . '/' . $total_pages ); ?>
                 </p>
                 <?php the_posts_pagination( array(
                     'mid_size'           => 1,

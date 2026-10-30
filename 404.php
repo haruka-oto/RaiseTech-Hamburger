@@ -5,7 +5,6 @@
     <main class="l-main">
         <div class="p-mainvisual-sub">
             <div class="p-mainvisual-sub__inner">
-                <h1 class="p-mainvisual-sub__text">404 Not Found</h1>
             </div>
         </div>
 

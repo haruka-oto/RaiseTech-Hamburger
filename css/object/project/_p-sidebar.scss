@@ -3,7 +3,7 @@
 
 .p-sidebar-button {
     padding-left: 10%;
-    height: 7%;
+    line-height: 217px;
 }
 
 .p-sidebar-menutitle {
@@ -11,12 +11,15 @@
     padding-bottom: 5%;
 }
 
+.p-sidebar-menutitle:hover {
+    color: #333;
+}
+
     .p-sidebar__black-bg {
     position: fixed;
     top: 0;
     opacity: 0;
     width: 100%;
-    height: 100%;
     background: rgba(3,3,3,0.5);
     z-index: -2000;
     display: block;
@@ -57,4 +60,7 @@
     overflow: hidden;
     position: fixed;
   }
+.p-sidebar {
+  padding-bottom: 40px;
+}
 

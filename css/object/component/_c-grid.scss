@@ -5,19 +5,21 @@
 .c-grid {
   display: grid;
   grid-template-columns: minmax(0,1fr) 20%;
-  grid-template-rows: minmax(217px,auto) 1fr 150px;
+  grid-template-rows: minmax(217px,auto) 1fr minmax(150px,auto);
   grid-template-areas:"head side"
    "main side"
    "foot foot";
   min-height: 100vh;
   @include fw.mq("tab") {
   grid-template-columns: minmax(0,1fr);
+   grid-template-rows: minmax(217px,auto) 1fr minmax(150px,auto);
   grid-template-areas: "head"
    "main"
    "foot";
   }
   @include fw.mq("sp") {
   grid-template-columns: minmax(0,1fr);
+   grid-template-rows: minmax(217px,auto) 1fr minmax(150px,auto);
   grid-template-areas: "head"
    "main"
    "foot";
