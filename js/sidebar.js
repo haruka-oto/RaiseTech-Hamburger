@@ -27,7 +27,6 @@ function handleTabletMobileChange(e) {
   nav.classList.remove('l-sidebar__animation');
   
 } else {
-  console.log('タブレット以下')
   nav.classList.add('l-sidebar__animation');
 
  

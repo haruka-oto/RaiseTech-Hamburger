@@ -53,9 +53,7 @@
                 $page = get_page_by_path('aboutshop');
                 if ( $page ):
                 ?>
-                <a class="p-map__title" href="<?php echo esc_url(get_permalink( $page )); ?>">
-                    <?php echo esc_html( get_the_title($page)); ?>
-                </a>
+                <p class="p-map__title">見出しが入ります。</p>
                 <div class="p-map__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
                 <?php endif; ?>
                 <div class="p-map-shadow"></div>

@@ -106,3 +106,11 @@ function hamburger_widgets_init() {
     );
 }
 add_action( 'widgets_init', 'hamburger_widgets_init' );
+
+//フッターメニュー
+function hamburger_theme_setup() {
+    register_nav_menus( array(
+        'footer' => 'フッターメニュー',
+    ) );
+}
+add_action( 'after_setup_theme', 'hamburger_theme_setup' );

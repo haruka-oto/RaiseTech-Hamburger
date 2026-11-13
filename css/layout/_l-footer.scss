@@ -9,7 +9,6 @@
    background-size: cover;
    display: flex;
    align-items: center;
-   justify-content: center;
    flex-direction: column;
     @include fw.mq("tab") {
     width: 100vw;

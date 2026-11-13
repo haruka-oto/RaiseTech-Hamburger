@@ -1,6 +1,11 @@
                 <footer class="l-footer">
-                    <p class="p-footer__title u-margin-pc">ショップ情報 | ヒストリー</p>
-                    <small class="c-copyright u-color--white">Copyright: <?php bloginfo( 'name' ); ?> RaiseTech</small>
+                    <?php
+                    wp_nav_menu( array(
+                    'theme_location' => 'footer',
+                    ) );
+                    ?>
+                    <small class="c-copyright u-color--white u-padding--copyright">Copyright: RaiseTeach</small>
+
                 </footer>
             </div>
             <?php wp_footer(); ?>

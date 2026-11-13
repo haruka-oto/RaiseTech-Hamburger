@@ -242,3 +242,42 @@ ul.page-numbers li > span.current {
     color: white;
 }
 
+//フッターカスタムメニュー
+.menu-item-object-page {
+    display: flex;
+    align-items: center;
+}
+.menu-item-object-page >a {
+    font-size: 20px;
+    line-height: 3;
+    color: rgb(255, 255, 255);
+    @include fw.mq("sp") {
+    font-size: 16px;
+    }
+
+}
+
+.l-footer .menu {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    
+    
+}
+
+.l-footer .menu-item {
+    padding: 0;
+    @include fw.mq("sp") {
+    padding-bottom: 60px;
+  }
+}
+
+.l-footer .menu-item >a {
+    margin: 0;
+}
+
+.l-footer .menu-item:not(:last-child)::after {
+  content: "｜";
+  margin: 0.05rem;
+  color: white;
+}
