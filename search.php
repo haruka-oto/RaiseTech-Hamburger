@@ -94,7 +94,7 @@
             </ul>
         </div>
         <?php else : ?>
-            <p>投稿はありません。</p>
+            <p class="u-margin-errormessage">投稿はありません。</p>
         <?php endif; ?>
     </main>
     <?php get_footer(); ?>

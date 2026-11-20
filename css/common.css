@@ -1463,6 +1463,11 @@ color: rgb(112, 112, 112);
   margin-left: auto;
 }
 
+.u-margin-errormessage {
+  padding-top: 20px;
+  padding-bottom: 300px;
+}
+
 .u-tab-only {
   display: none;
   position: relative;
