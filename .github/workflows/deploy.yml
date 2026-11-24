@@ -19,7 +19,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /haru-coding/public_html/wp-content/themes/hamburger-wp/
+          server-dir: /haru-coding.com/public_html/wp-content/themes/hamburger-wp/
           exclude: |
             **/.git*
             **/.git*/**
